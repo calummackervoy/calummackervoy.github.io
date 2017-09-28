@@ -1,0 +1,35 @@
+{
+  "name": "calummackervoy.github.io",
+  "description": "Personal website for myself and my projects.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/calummackervoy/calummackervoy.github.io.git"
+  },
+  "bugs": {
+    "url": "https://github.com/calummackervoy/calummackervoy.github.io/issues"
+  },
+  "homepage": "https://github.com/calummackervoy/calummackervoy.github.io#readme",
+  "dependencies": {
+    "@angular/common": "2.0.0",
+    "@angular/compiler": "2.0.0",
+    "@angular/core": "2.0.0",
+    "@angular/forms": "2.0.0",
+    "@angular/http": "2.0.0",
+    "@angular/platform-browser": "2.0.0",
+    "@angular/platform-browser-dynamic": "2.0.0",
+    "@angular/router": "3.0.0",
+ 
+    "core-js": "^2.4.0",
+    "rxjs": "5.0.0-beta.12",
+    "systemjs": "0.19.37",
+    "zone.js": "0.6.21"
+  },
+  "devDependencies": {
+    "live-server": "0.8.2",
+    "typescript": "^2.0.0"
+  }
+}
