@@ -1,0 +1,37 @@
+
+/*fonts*/
+/*font-family: 'Kumar One Outline', cursive;*/
+
+body {
+  /*background-color: #6E6D70;*/
+  padding-top:20px;
+}
+
+#container {
+  min-width: 450px; /*ensure the width of the container isn't smaller than 450px*/
+  max-width: 960px; /*ensure the width of the container isn't greater than 960px*/
+  margin: auto;
+}
+
+.chunk {
+  border-radius: 20px;
+  margin: 50px;
+  background-color: #93C178;
+}
+
+#navbar {
+  background-color: #93C178;
+  text-align: center;
+}
+
+#navbar ul {
+  list-style: none;
+}
+
+#main {
+  text-align: center;
+}
+
+.main-header {
+  font-family: 'Kumar One Outline', cursive;
+}
