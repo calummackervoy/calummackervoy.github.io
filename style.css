@@ -1,6 +1,6 @@
 
 /*fonts*/
-/*font-family: 'Kumar One Outline', cursive;*/
+/*font-family: 'Exo', sans-serif;*/
 
 body {
   /*background-color: #6E6D70;*/
@@ -22,10 +22,15 @@ body {
   width: 40%;
   margin-left: 2%;
   margin-right: 2%;
+  margin-bottom: 20px;
   border-radius: 20px;
   padding: 20px;
   background-color: #93C178;
   float: left;
+}
+
+.mini-bloc p {
+  padding-left: 10%;
 }
 
 #navbar {
@@ -46,8 +51,33 @@ body {
 
 #main {
   text-align: center;
+
 }
 
+.subsection {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.subsection p {
+  padding-left: 10%;
+}
+
+/*Headers and ting*/
+
 .main-header {
-  font-family: 'Kumar One Outline', cursive;
+  font-family: 'Exo', sans-serif;
+  font-size: 72px;
+}
+
+h2 {
+  font-family: 'Exo', sans-serif;
+  font-size: 36px;
+  padding-left: 10%;
+}
+
+h3 {
+  font-family: 'Exo', sans-serif;
+  font-size: 24px;
+  padding-left: 10%;
 }
