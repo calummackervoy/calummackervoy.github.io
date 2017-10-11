@@ -1,6 +1,7 @@
 
 /*fonts*/
 /*font-family: 'Exo', sans-serif;*/
+/*font-family: 'Pontano Sans', sans-serif;*/
 
 body {
   /*background-color: #6E6D70;*/
@@ -32,6 +33,20 @@ body {
   padding-left: 10%;
 }
 
+p {
+  font-family: 'Pontano Sans', sans-serif;
+}
+
+/*ruling for links in the navigation bar*/
+a {
+  text-decoration: none;
+  color: #523e7c;
+}
+/*change the colour of the navbar options when hovered over*/
+a:hover{
+  color: #8773B3;
+}
+
 #navbar {
   background-color: #93C178;
   text-align: center;
@@ -47,16 +62,6 @@ body {
   margin-right: 40px; /*ensure the elements are clearly separate*/
   padding: 5px;
   border-radius: 3px;
-}
-
-/*ruling for links in the navigation bar*/
-a {
-  text-decoration: none;
-  color: #523e7c;
-}
-/*change the colour of the navbar options when hovered over*/
-a:hover{
-  color: #8773B3;
 }
 
 #main {
