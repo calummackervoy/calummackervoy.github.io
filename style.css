@@ -13,10 +13,19 @@ body {
   margin: auto;
 }
 
-.chunk {
+.bloc {
   border-radius: 20px;
-  margin: 50px;
   background-color: #93C178;
+}
+
+.mini-bloc {
+  width: 40%;
+  margin-left: 2%;
+  margin-right: 2%;
+  border-radius: 20px;
+  padding: 20px;
+  background-color: #93C178;
+  float: left;
 }
 
 #navbar {
@@ -26,6 +35,13 @@ body {
 
 #navbar ul {
   list-style: none;
+}
+
+#navbar ul li {
+  display: inline; /*display the elements on one line*/
+  margin-right: 40px; /*ensure the elements are clearly separate*/
+  padding: 5px;
+  border-radius: 3px;
 }
 
 #main {
