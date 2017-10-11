@@ -86,6 +86,11 @@ a:hover{
   padding-left: 10%;
 }
 
+/*Projects.html only*/
+.proj-type {
+  color: #53584c;
+}
+
 /*Headers and ting*/
 
 .main-header {
