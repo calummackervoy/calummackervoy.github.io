@@ -25,6 +25,7 @@ body {
   margin-bottom: 20px;
   border-radius: 20px;
   padding: 20px;
+  padding-right: 40px;
   background-color: #93C178;
   float: left;
 }
@@ -45,6 +46,10 @@ a {
 /*change the colour of the navbar options when hovered over*/
 a:hover{
   color: #8773B3;
+}
+
+.display-block {
+  display: block;
 }
 
 #navbar {
