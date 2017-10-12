@@ -12,6 +12,7 @@ body {
   min-width: 450px; /*ensure the width of the container isn't smaller than 450px*/
   max-width: 960px; /*ensure the width of the container isn't greater than 960px*/
   margin: auto;
+  font-size: 26px;
 }
 
 .bloc {
