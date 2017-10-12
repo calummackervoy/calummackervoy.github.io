@@ -53,6 +53,10 @@ a:hover{
   display: block;
 }
 
+.right-align {
+  text-align: right;
+}
+
 #navbar {
   background-color: #93C178;
   text-align: center;
@@ -103,6 +107,27 @@ a:hover{
 }
 
 /*contact.html only*/
+
+.contact {
+  /*border: 5px solid #53584c;
+  border-radius: 10px;*/
+  border: 10px solid #93C178;
+  width: 70%;
+  margin: auto;
+  padding: 50px;
+}
+
+.contact table {
+
+}
+
+.contact table tr {
+
+}
+
+.contact table tr td {
+  width: 50%;
+}
 
 /*Headers and ting*/
 
