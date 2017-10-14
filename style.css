@@ -3,9 +3,14 @@
 /*font-family: 'Exo', sans-serif;*/
 /*font-family: 'Pontano Sans', sans-serif;*/
 
+header {
+  font-family: 'Exo', sans-serif;
+}
+
 body {
   /*background-color: #6E6D70;*/
   padding-top:20px;
+  font-family: 'Exo', sans-serif;
 }
 
 #container {
@@ -134,18 +139,19 @@ a:hover{
 /*Headers and ting*/
 
 .main-header {
-  font-family: 'Exo', sans-serif;
   font-size: 72px;
 }
 
 h2 {
-  font-family: 'Exo', sans-serif;
   font-size: 36px;
   padding-left: 10%;
 }
 
 h3 {
-  font-family: 'Exo', sans-serif;
-  font-size: 24px;
+  font-size: 28px;
+  padding-left: 10%;
+}
+
+h4 {
   padding-left: 10%;
 }
