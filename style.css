@@ -40,6 +40,16 @@ body {
   padding-left: 10%;
 }
 
+.mini-bloc img {
+  margin-left: 10%;
+  max-width: 90%;
+  border-radius: 30px;
+}
+
+#alerta {
+  margin-left: 30%;
+}
+
 p {
   font-family: 'Pontano Sans', sans-serif;
 }
@@ -154,4 +164,5 @@ h3 {
 
 h4 {
   padding-left: 10%;
+  padding-top: 30px;
 }
