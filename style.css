@@ -17,10 +17,9 @@ body {
   min-width: 450px; /*ensure the width of the container isn't smaller than 450px*/
   max-width: 960px; /*ensure the width of the container isn't greater than 960px*/
   margin: auto;
-  font-size: 26px;
 }
 
-.bloc {
+/*.bloc {
   border-radius: 20px;
   background-color: #93C178;
 }
@@ -48,13 +47,9 @@ body {
   display: inline-block;
 }
 
-#alerta {
-
-}
-
 p {
   font-family: 'Pontano Sans', sans-serif;
-}
+}*/
 
 /*ruling for links in the navigation bar*/
 a {
@@ -120,9 +115,32 @@ a:hover{
   padding-left: 10%;
 }
 
-/*Projects.html only*/
+/*
+*     PROJECTS.HTML CSS
+*
+*/
 .proj-type {
   color: #53584c;
+}
+
+#quicklinks {
+  padding: 10px;
+}
+
+.quicklink {
+  text-align: center !important;
+  font-size: 32px !important;
+}
+
+@media only screen and (max-width: 287px) {
+  #quicklinks {
+    padding: 0px;
+  }
+  .quicklink {
+    padding-top: 3px;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
 }
 
 /*contact.html only*/
