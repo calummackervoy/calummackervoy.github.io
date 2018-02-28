@@ -4,7 +4,7 @@
 <head>
   <title>Calum Mackervoy</title>
   <meta http-equiv="content-type" content="text/html;charset=utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=0.5">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!--Bootstrap-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
@@ -37,7 +37,7 @@
   <div id="body">
     <div id="container">
       <!--quick links at top-->
-      <div class="row" id="quicklinks">
+      <!--<div class="row" id="quicklinks">
         <div class="col-sm-4 col-md-4 col-lg-4 quicklink">
           <a href="#web">Web</a>
         </div>
@@ -55,43 +55,308 @@
         <div class="col-sm-4 col-md-4 col-lg-4 quicklink">
           <a href="#infrastructure">Infrastructure</a>
         </div>
-      </div>
+      </div>-->
 
       <div class="row">
-        <h3>Desktop</h3>
         <div class="col-md-6">
-          <div class="card" style="width: 100%;">
-            <div class="card-block" id="hivemindmob">
-              <h4 class="card-title"><a href=""></a> <span class = "proj-type">  </span></h4>
+          <div class="card">
+            <div class="card-block" id="alerta">
+              <h4 class="card-title indent1"><a href="https://github.com/calummackervoy/Alerta">Alerta</a></h4>
+              <h6 class="indent1"><span class = "proj-type">Android/iOS App using Ionic</span></h6>
               <div class="row">
+                <div class="col-md-6 center-block">
+                  <img class="screenshot" src="img/medium/alerta-prototype.png" alt="Prototype of the app"></img>
+                </div>
+                <div class="col-md-6">
+                  <div class="card-text mobile-indent1">
+                    <p>In-development app for communicating locations within a network of trust.</p>
+                    <p>
+                      Current working version maintains a map with user-defined locations stored as pins. Work has begun on implementing
+                      the <a href="https://en.wikipedia.org/wiki/Signal_Protocol">Signal protocol</a> to share locations between devices
+                      through a secure channel.
+                    </p>
+                    <h6>GPLv3 License</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-block" id="filmfestival">
+              <h4 class="card-title indent1"><a href="https://api.newcastlefestival.co.uk/">Newcastle Film Festival</a></h4>
+              <h6 class="indent1"><span class = "proj-type">Android/iOS App using Ionic</span></h6>
+              <!--<div class="row">
                 <div class="col-md-5">
-                  <img class="screenshot" src="img/medium/hivemindmob.png" alt="screenshot of the game"></img>
+                  <img class="screenshot" src="NULL" alt="Screenshot of the app"></img>
+                </div>-->
+                <!--<div class="col-md-7 card-text indent1">-->
+                <div class="indent1">
+                  <p>
+                    Developed the official Newcastle Film Festival app with <a href="https://nebulalabs.co.uk/">Nebula Labs</a>
+                    providing a host of interesting features, including:
+                  </p>
+                  <ul>
+                    <li>A map of venues and schedule of events pulled from a backend API</li>
+                    <li>Filtering/Searching features for both the schedule and map</li>
+                    <li>Anonymised location tracking &amp; a heatmap of "hot spots" where many users are congregated</li>
+                    <li>Twitter and Instagram feeds for the festival</li>
+                    <li>Ability to login and purchase tickets via <a href="https://www.eventbrite.com/">Eventbrite</a></li>
+                    <li>The ability to book an Uber to a venue from within the app</li>
+                  </ul>
                 </div>
-                <div class="col-md-7">
-                  <p class="card-text"></p>
+                <!--</div>
+              </div>-->
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!---/row-->
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-block" id="antome">
+              <h4 class="card-title indent1"><a href="https://play.google.com/store/apps/details?id=io.wellbeings.anatome">Anatome</a></h4>
+              <h6 class="indent1"><span class = "proj-type">Android App (Native)</span></h6>
+                <img class="screenshot" src="img/medium/anatome.PNG" alt="Screenshot of the app"></img>
+                <div class="card-text indent1">
+                  <p>
+                    Tool to support student mental wellbeing, including a number of tools for:
+                  </p>
+                  <ul>
+                    <li>Breathing assistance during an anxiety attack</li>
+                    <li>Thought diary to perform self-managed e-CBT</li>
+                    <li>Alcohol consumption record and advisor based on UK government guidelines</li>
+                  </ul>
                 </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-block" id="hivemindmob">
+              <h4 class="card-title indent1"><a href="https://github.com/calummackervoy/HiveMindMobEngine">Hive Mind Mob</a></h4>
+              <h6 class="indent1"><span class = "proj-type">C++, Python/Django, Angular</span></h6>
+              <img class="screenshot" src="img/medium/hivemindmob.png" alt="Screenshot of the game"></img>
+                <div class="card-text indent1">
+                  <p>A collection of games with a common concept:</p>
+                  <ul>
+                    <li>An engine and turn-based strategy game written from scratch in <b>C++</b></li>
+                    <li>An engine which interfaces with a <b>Django Python</b> backend to build a role-playing game from user-input</li>
+                    <li>More to follow</li>
+                  </ul>
+                  <p>
+                    A work in progress
+                  </p>
+                  <h6 class="license">GPLv3 License</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+
+      </div>
+      <!---/row-->
+
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-block" id="nhsmail">
+              <h4 class="card-title indent1">Mailing List Management in the NHS</h4>
+              <h6 class="indent1"><span class = "proj-type">Node.js server &amp; HTML/CSS/JS client</span></h6>
+              <p class="card-text indent1">
+                Mailing list management to select a random sample of patients and ensure duplicate letters are not sent twice,
+                alongside other tools and features.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-block" id="karmamigration">
+              <h4 class="card-title indent1">Large Database Migration for <a href="http://karmacomputing.co.uk/">Karma Computing</a></h4>
+              <h6 class="indent1"><span class = "proj-type">SQL</span></h6>
+              <p class="card-text indent1">
+                Involving large quantities of data from an old system to one which was radically restructed and stored with a different DBMS.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!---/row-->
+
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-block" id="janemackervoy">
+              <h4 class="card-title indent1"><a href="http://www.jane.mackervoy.com">Jane.mackervoy.com</a></h4>
+              <h6 class="indent1"><span class = "proj-type">Website</span></h6>
+                <img class="screenshot" src="img/medium/janemackervoy.PNG" alt="Screenshot of jane.mackervoy.com"></img>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-block" id="rasteriser">
+              <h4 class="card-title indent1">3D Graphics Rasteriser</h4>
+              <h6 class="indent1"><span class = "proj-type">C/C++</span></h6>
+                <img class="screenshot" src="img/medium/rasteriser.PNG" alt="Screenshot of two cubes rendered with the rasteriser"></img>
+                <p class="card-text indent1">Developed a custom graphics rasteriser in C++ for execution on the CPU and another using OpenGL.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!---/row-->
+
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-block" id="java-browser">
+              <h4 class="card-title indent1">Web Browser</h4>
+              <h6 class="indent1"><span class = "proj-type">Java</span></h6>
+                <img class="screenshot" src="img/medium/browser.PNG" alt="Screenshot of this website on the web browser"></img>
+                <p class="card-text indent1">Capable of basic functionality such as displaying HTML, maintaining consistent bookmarks and a web histroy etc.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-block" id="ludumdare">
+              <h4 class="card-title indent1"><a href="http://ludumdare.com/compo/ludum-dare-31/?action=preview&uid=47551">TITLE</a></h4>
+              <h6 class="indent1"><span class = "proj-type">Game in Unity/C#</span></h6>
+              <img class="screenshot" src="img/medium/titlegame.PNG" alt="Screenshot of the game"></img>
+              <p class="card-text indent1">Designing, coding and producing the graphical assets for a 2D platformer in Unity (as part of a 72-hour programming competition by Ludum Dare). Scripts written in C#/.NET.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!---/row-->
+
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-block" id="cctz">
+              <h4 class="card-title indent1"><a href="https://gitlab.com/calummackervoy/GameDev">Capitalists, Commies &amp; Thatcher Zombies</a></h4>
+              <h6 class="indent1"><span class = "proj-type">Game in C/C++</span></h6>
+              <img class="screenshot" src="img/medium/capitalistscommiesthatcherzombies.PNG" alt="Screenshot of the game"></img>
+              <p class="card-text indent1">Turn-based/real-time strategy hybrid and its supporting engine.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-block" id="capturecastle">
+              <h4 class="card-title indent1"><a href="https://gitlab.com/calummackervoy/GamingSims">Capture The Castle</a></h4>
+              <h6 class="indent1"><span class = "proj-type">Game in C/C++</span></h6>
+              <img class="screenshot" src="img/medium/capturethecastle.PNG" alt="Screenshot of the game"></img>
+              <p class="card-text indent1">Real-time strategy game and 2D physics simulation.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!---/row-->
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-block" id="webservers">
+              <h4 class="card-title indent1">Miscellaneous Servers</h4>
+              <div class="indent1">
+                <ul>
+                  <li>Set-up and administration of an <b>Apache Linux</b> server using configuration files and <b>PHP</b>.</li>
+                  <li><b>Java</b> servlets simulating a dog kennel service.</li>
+                </ul>
               </div>
             </div>
           </div>
         </div>
         
         <div class="col-md-6">
-          <div class="card" style="width: 100%;">
-            <div class="card-block" id="hivemindmob">
-              <h4 class="card-title"><a href="https://github.com/calummackervoy/HiveMindMobEngine">Hive Mind Mob</a> <span class = "proj-type"> (Game in C++) </span></h4>
-              <div class="row">
-                <div class="col-md-5">
-                  <img class="screenshot" src="img/medium/hivemindmob.png" alt="screenshot of the game"></img>
-                </div>
-                <div class="col-md-7">
-                  <p class="card-text"></p>
-                </div>
+          <div class="card">
+            <div class="card-block" id="databases">
+              <h4 class="card-title indent1">Miscellaneous Databases</h4>
+              <div class="indent1">
+                <ul>
+                  <li>Use of <b>Hibernate/HQL</b> for Java-database interaction.</li>
+                  <li>Created a bus system in MySQL with a Java interface.</li>
+                  <li>Other SQL databases using Microsoft Access and Microsoft SQL Server.</li>
+                </ul>
               </div>
             </div>
           </div>
         </div>
 
       </div>
+      <!---/row-->
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-block" id="dissertation">
+              <h4 class="card-title indent1"><a href="https://gitlab.com/calummackervoy/goap-igpu">Dissertation</a></h4>
+              <h6 class="indent1"><span class = "proj-type">Game AI distributed on a GPU</span></h6>
+              <p class="card-text indent1">Used OpenCL to produce a distributed version of Goal Oriented Action Planning (GOAP).</p>
+              <p class="card-text indent1">The software was deployed on the iGPU and GPU devices with each core acting as a single agent.</p>
+              <p class="card-text indent1">It was found that running the AI on the (normally unused) iGPU greatly improved the performance of the test simulation,
+                compared to tests running AI on the CPU or GPU.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-block" id="machinelearning">
+              <h4 class="card-title indent1">Machine Learning</h4>
+              <div class="indent1">
+                <ul>
+                  <li>Classification problem using Ant Colony Optimisation (Myra).</li>
+                  <li>Classification problem using Genetic Algorithm (EpochX).</li>
+                  <li>Knowledge on Neural Networks, Particle Swarms and other methods.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!---/row-->
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-block" id="assembly">
+              <h4 class="card-title indent1">Assembly!</h4>
+              <img class="screenshot" src="img/medium/liftsim.PNG" alt="Screenshot of the program running"></img>
+              <p class="card-text indent1">Traffic light &amp; lift simulations written in assembly language.
+                Involved manipulating memory addresses, registers, conditional JMP commands and the use of flags.
+              </p>
+              <p class="card-text indent1">This is programming as closely to computer hardware as you can without using binary.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-block" id="tinyos">
+              <h4 class="card-title indent1">TinyOS</h4>
+              <h6 class="indent1"><span class = "proj-type">Operating System for a USB device</span></h6>
+              <p class="card-text indent1">Written in <a href="http://nescc.sourceforge.net/">NesC</a>, an extension to C which takes up <b>8KB</b> of memory.</p>
+              <p class="card-text indent1">The USB was integrated into a network and was able to communicate simple messages to its peers.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!---/row-->
     </div>
   </div>
   
