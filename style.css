@@ -112,13 +112,19 @@ header {
 }
 
 #bio {
-  margin-left: 10px;
+  margin-left: 20px;
   margin-right: 10px;
 }
 
 @media screen and (min-width: 768px) {
   #profile-pic {
     margin-left: 10px;
+  }
+}
+
+@media screen and (max-width: 295px) {
+  #profile-pic {
+    width: 100%;
   }
 }
 
@@ -138,6 +144,12 @@ header {
 
 #highlight-alerta {
   background-image: url("img/alerta.png");
+}
+
+@media screen and (max-width: 500px) {
+  .open-source-highlight {
+    width: 100%;
+  }
 }
 
 /*
