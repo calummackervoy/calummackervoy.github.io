@@ -160,6 +160,10 @@ header {
   color: #53584c;
 }
 
+.card {
+  height: 100%;
+}
+
 .screenshot {
   display: block;
   margin: 0 auto;
