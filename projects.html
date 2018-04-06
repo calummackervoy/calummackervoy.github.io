@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="width:100%">
 <!-- head element-->
-<head>
+<head style="width: 100%">
   <title>Calum Mackervoy</title>
   <meta http-equiv="content-type" content="text/html;charset=utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,7 +15,7 @@
 </head>
 
 <!-- body element-->
-<body>
+<body style="width: 100% !important; margin-right: 0 !important;">
   <!--jQuery, popper and bootstrap-->
   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
@@ -101,12 +101,44 @@
             <div class="card-block" id="filmfestival">
               <h4 class="card-title indent1"><a href="https://api.newcastlefestival.co.uk/">Newcastle Film Festival</a></h4>
               <h6 class="indent1"><span class = "proj-type">Android/iOS App using Ionic</span></h6>
-              <!--<div class="row">
-                <div class="col-md-5">
-                  <img class="screenshot" src="NULL" alt="Screenshot of the app"></img>
-                </div>-->
-                <!--<div class="col-md-7 card-text indent1">-->
-                <div class="indent1">
+              <div class="row">
+                <div class="col-md-5 center-block text-center">
+                  <!--image carousel with app screenshots-->
+                  <div id="filmfestival-carousel" class="carousel slide" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators" role="listbox">
+                      <li data-target="#filmfestival-carousel" data-slide-to="0" class="active"></li>
+                      <li data-target="#filmfestival-carousel" data-slide-to="1"></li>
+                      <li data-target="#filmfestival-carousel" data-slide-to="2"></li>
+                    </ol>
+
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img src="img/medium/filmfest1.png" alt="Screenshot of the map feature">
+                      </div>
+
+                      <div class="carousel-item">
+                        <img src="img/medium/filmfest2.png" alt="Screenshot of the filter feature">
+                      </div>
+
+                      <div class="carousel-item">
+                        <img src="img/medium/filmfest3.png" alt="Screenshot of the Instagram feed feature">
+                      </div>
+                    </div>
+
+                    <!-- Left and right controls -->
+                    <a class="carousel-control-prev" href="#filmfestival-carousel" role="button" data-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#filmfestival-carousel" role="button" data-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Next</span>
+                    </a>
+                  </div>
+                </div>
+                <div class="col-md-7 card-text"><!-- indent1">-->
                   <p>
                     Developed the official Newcastle Film Festival app with <a href="https://nebulalabs.co.uk/">Nebula Labs</a>
                     providing a host of interesting features, including:
@@ -120,8 +152,8 @@
                     <li>The ability to book an Uber to a venue from within the app</li>
                   </ul>
                 </div>
-                <!--</div>
-              </div>-->
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -148,7 +180,44 @@
             </div>
           </div>
         </div>
-        
+
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-block" id="karmamigration">
+              <h4 class="card-title indent1">Billing System for <a href="http://karmacomputing.co.uk/">Karma Computing</a></h4>
+              <h6 class="indent1"><span class = "proj-type">Variety of server- and client-side languages</span></h6>
+              <p class="card-text indent1">
+                Worked with the Karma team on a large-scale project to create an automated system for managing customer services & payments using third-party services.
+                The code was written to be generic for use by any company selling a service which requires instant and recurring payments.
+              </p>
+              <div style="margin-bottom: 5px"></div>
+
+              <h4 class="card-title indent1">Large Database Migration for <a href="http://karmacomputing.co.uk/">Karma Computing</a></h4>
+              <h6 class="indent1"><span class = "proj-type">SQL</span></h6>
+              <p class="card-text indent1">
+                Involving large quantities of data from an old system to one which was radically restructed and stored with a different DBMS.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!---/row-->
+
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-block" id="nhsmail">
+              <h4 class="card-title indent1">Mailing List Management in the NHS</h4>
+              <h6 class="indent1"><span class = "proj-type">Node.js server &amp; HTML/CSS/JS client</span></h6>
+              <p class="card-text indent1">
+                Mailing list management to select a random sample of patients and ensure duplicate letters are not sent twice,
+                alongside other tools and features.
+              </p>
+            </div>
+          </div>
+        </div>
+
         <div class="col-md-6">
           <div class="card">
             <div class="card-block" id="hivemindmob">
@@ -177,35 +246,6 @@
       <div class="row">
         <div class="col-md-6">
           <div class="card">
-            <div class="card-block" id="nhsmail">
-              <h4 class="card-title indent1">Mailing List Management in the NHS</h4>
-              <h6 class="indent1"><span class = "proj-type">Node.js server &amp; HTML/CSS/JS client</span></h6>
-              <p class="card-text indent1">
-                Mailing list management to select a random sample of patients and ensure duplicate letters are not sent twice,
-                alongside other tools and features.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-6">
-          <div class="card">
-            <div class="card-block" id="karmamigration">
-              <h4 class="card-title indent1">Large Database Migration for <a href="http://karmacomputing.co.uk/">Karma Computing</a></h4>
-              <h6 class="indent1"><span class = "proj-type">SQL</span></h6>
-              <p class="card-text indent1">
-                Involving large quantities of data from an old system to one which was radically restructed and stored with a different DBMS.
-              </p>
-            </div>
-          </div>
-        </div>
-
-      </div>
-      <!---/row-->
-
-      <div class="row">
-        <div class="col-md-6">
-          <div class="card">
             <div class="card-block" id="janemackervoy">
               <h4 class="card-title indent1"><a href="http://www.jane.mackervoy.com">Jane.mackervoy.com</a></h4>
               <h6 class="indent1"><span class = "proj-type">Website</span></h6>
@@ -213,7 +253,7 @@
             </div>
           </div>
         </div>
-        
+
         <div class="col-md-6">
           <div class="card">
             <div class="card-block" id="rasteriser">
@@ -240,7 +280,7 @@
             </div>
           </div>
         </div>
-        
+
         <div class="col-md-6">
           <div class="card">
             <div class="card-block" id="ludumdare">
@@ -266,7 +306,7 @@
             </div>
           </div>
         </div>
-        
+
         <div class="col-md-6">
           <div class="card">
             <div class="card-block" id="capturecastle">
@@ -294,7 +334,7 @@
             </div>
           </div>
         </div>
-        
+
         <div class="col-md-6">
           <div class="card">
             <div class="card-block" id="databases">
@@ -325,7 +365,7 @@
             </div>
           </div>
         </div>
-        
+
         <div class="col-md-6">
           <div class="card">
             <div class="card-block" id="machinelearning">
@@ -356,7 +396,7 @@
             </div>
           </div>
         </div>
-        
+
         <div class="col-md-6">
           <div class="card">
             <div class="card-block" id="tinyos">
@@ -393,6 +433,6 @@
     </p>
     </div>
   </footer>
-  
+
 </body>
 </html>
