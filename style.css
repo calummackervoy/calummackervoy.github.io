@@ -226,6 +226,14 @@ header {
 .main-header {
   font-size: 72px;
   padding-left: 5%;
+  padding-right: 20%;
+}
+
+/*smaller font for mobile devices*/
+@media screen and (max-width: 508px) {
+  .main-header {
+    font-size: 36px;
+  }
 }
 
 h2 {
