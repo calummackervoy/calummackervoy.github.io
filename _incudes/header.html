@@ -1,0 +1,21 @@
+<header class = "navbar-fixed-top" role="banner">
+    <div class="container">
+        <nav class="navbar navbar-toggleable-md navbar-light bg-faded navbar-expand-sm navbar-expand-md">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target=".navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- links (for navigation bar)-->
+        <div class = "collapse navbar-collapse navbarSupportedContent">
+            <ul class = "navbar-nav mr-auto" role="navigation">
+                {% for page in site.pages %} {% if page.title %}
+                <li class="nav-item">
+                    <a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+                </li>
+                {% endif %} {% endfor %}
+            </ul>
+        </div>
+        </nav>
+        <h1 class="main-header"><a href="{{ site.baseurl }}">{{ site.title }}</a></h1>
+    </div>
+</header>
