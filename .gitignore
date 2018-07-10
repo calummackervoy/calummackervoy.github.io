@@ -1,1 +1,5 @@
 node_modules
+old
+_site
+.sass-cache
+.jekyll-metadata
