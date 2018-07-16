@@ -96,3 +96,18 @@ header {
 .project {
     margin-bottom: 10px;
 }
+
+.tags {
+  list-style: none;
+  margin-bottom: 5px;
+}
+
+.tags li {
+  display: inline; /*display the elements on one line*/
+  line-height: 2.25;
+  margin-right: 2px; /*ensure the elements are clearly separate*/
+  //margin-bottom: 2px;
+  padding: 5px;
+  border-radius: 3px;
+  background-color: $tag-bg;
+}
