@@ -1,0 +1,33 @@
+---
+layout: page
+title: Portfolio
+permalink: /portfolio/
+---
+
+{% for project in site.projects %}
+<div id="{{project.identifier}}" class="project">
+    <h4>
+        {% if project.website %}<a href="{{project.website}}">{{project.title}}</a>
+        {% else %} {{project.title}} {% endif %}
+    </h4>
+
+    <img src="{{ project.image_source | absolute_url }}" alt="{{project.image_alt}}" />
+
+    {% if project.paras %}
+        {% for para in project.paras %}
+            <p>{{para}}</p>
+        {% endfor %}
+    {% endif %}
+
+    <h6>Tags</h6>
+    <ul>
+        {% for tag in project.tags %}
+            <li>{{tag}}</li>
+        {% endfor %}
+    </ul>
+
+    {% if project.license %}
+        <p>License: {{project.license}}</p>
+    {% endif %}
+<div>
+{% endfor %}

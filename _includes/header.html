@@ -8,6 +8,9 @@
         <!-- links (for navigation bar)-->
         <div class = "collapse navbar-collapse navbarSupportedContent">
             <ul class = "navbar-nav mr-auto" role="navigation">
+                <li class="nav-item">
+                    <a href="{{ '/' | prepend: site.baseurl | prepend: site.url }}">Home</a>
+                </li>
                 {% for page in site.pages %} {% if page.title %}
                 <li class="nav-item">
                     <a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>

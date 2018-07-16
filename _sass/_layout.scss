@@ -28,17 +28,6 @@ a:hover {
 	text-decoration: underline;
 }
 
-header {
-    background-color: $header;
-    padding: 0px 15px;
-	text-align: center;
-	margin: 50px 0 0;
-	height: 50vh;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
 main {
     padding: 0 15px;
 	max-width: $content-width;
@@ -50,6 +39,24 @@ main {
 	margin: 0 auto;
 }
 
+/*
+*    HEADER.HTML
+*/
+
+header {
+    background-color: $header;
+    padding: 0px 15px;
+	text-align: center;
+	margin: 50px 0 0;
+	height: 50vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.nav-item {
+    padding-right: 10px;
+}
 
 /*
 *     ABOUTME.HTML CSS
@@ -82,3 +89,10 @@ main {
       width: 100%;
     }
   }
+
+/*
+*   PORTFOLIO
+*/
+.project {
+    margin-bottom: 10px;
+}
