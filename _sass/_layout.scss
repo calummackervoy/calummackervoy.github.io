@@ -114,6 +114,16 @@ header {
   //background-color: green;
 }
 
+.project-image-container {
+  width: 100%;
+}
+
+.project-image {
+  margin: auto;
+  border-radius: 10px;
+  padding-left: 15px;
+}
+
 .tags {
   list-style: none;
   margin-bottom: 5px;

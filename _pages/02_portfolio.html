@@ -8,19 +8,20 @@ permalink: /portfolio/
 <div id="{{project.identifier}}" class="project card">
     <div class="card-block">
     <!--Project Heading-->
-    <h4 class="card-title">
+    <h2 class="card-title" style="margin: auto">
         {% if project.website %}<a href="{{project.website}}">{{project.title}}</a>
         {% else %} {{project.title}} {% endif %}
     </h4>
 
     <!--Project Image(s)-->
     {% if project.image_count > 0 %}
+        <div class="row project-image-container">
         {% if project.image_count == 1 %}
             <!--single image: simple image tag-->
-            <img src="{{ project.image_source | absolute_url }}" alt="{{project.image_alt}}" />
+            <img class="project-image" src="{{ project.image_source | absolute_url }}" alt="{{project.image_alt}}" />
         {% else %}
             <!--multiple images: carousel-->
-            <div id="carousel-{{project.identifier}}" class="carousel slide" data-ride="carousel">
+            <div id="carousel-{{project.identifier}}" class="carousel slide project-image" data-ride="carousel">
                 <!-- Indicators -->
                 <ol class="carousel-indicators" role="listbox">
                     <li data-target="#carousel-{{project.identifier}}" data-slide-to="0" class="active"></li>
@@ -53,6 +54,7 @@ permalink: /portfolio/
                 </a>
             </div>
         {% endif %}
+        </div>
     {% endif %}
 
     <!--Project Text-->
