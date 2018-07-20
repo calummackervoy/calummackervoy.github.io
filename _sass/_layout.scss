@@ -1,11 +1,22 @@
 
 body {
+  width: 100vw;
+  overflow-x: hidden !important;
+  //max-width: 100%;
     margin: 0;
     color: $font-color;
 	font-family: $font-style;
 	font-size: 1.1em;
 	line-height: 1.6;
     -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+}
+
+#container {
+  max-width: 100%;
 }
 
 h1,
@@ -29,13 +40,15 @@ a:hover {
 }
 
 main {
-    padding: 0 15px;
-	max-width: $content-width;
+  padding: 0 15px;
+  //max-width: $content-width;
+  //max-width: 70%;
 	margin: 0 auto;
 }
 
 .container {
-	max-width: $content-width;
+  //max-width: $content-width;
+  //max-width: 70%;
 	margin: 0 auto;
 }
 
@@ -94,7 +107,11 @@ header {
 *   PORTFOLIO
 */
 .project {
-    margin-bottom: 10px;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid $font-color;
+  border-radius: 10px;
+  //background-color: green;
 }
 
 .tags {
