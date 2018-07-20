@@ -5,9 +5,10 @@ permalink: /portfolio/
 ---
 
 {% for project in site.projects %}
-<div id="{{project.identifier}}" class="project">
+<div id="{{project.identifier}}" class="project card">
+    <div class="card-block">
     <!--Project Heading-->
-    <h4>
+    <h4 class="card-title">
         {% if project.website %}<a href="{{project.website}}">{{project.title}}</a>
         {% else %} {{project.title}} {% endif %}
     </h4>
@@ -56,9 +57,11 @@ permalink: /portfolio/
 
     <!--Project Text-->
     {% if project.paras %}
+        <div class="card-text">
         {% for para in project.paras %}
             <p>{{para}}</p>
         {% endfor %}
+        </div>
     {% endif %}
 
     <!--Project Tags-->
@@ -73,5 +76,6 @@ permalink: /portfolio/
     {% if project.license %}
         <p>License: {{project.license}}</p>
     {% endif %}
+    </div>
 </div>
 {% endfor %}
