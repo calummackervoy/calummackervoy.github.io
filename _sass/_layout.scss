@@ -89,6 +89,16 @@ header {
 }
 
 /*
+*     PAGE.HTML
+*/
+.page-title, .contact-title {
+  text-align: center;
+  font-family: $main-heading-font !important;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+/*
 *     ABOUTME.HTML CSS
 */
 #profile-pic {
