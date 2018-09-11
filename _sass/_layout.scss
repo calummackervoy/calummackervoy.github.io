@@ -52,12 +52,16 @@ main {
 	margin: 0 auto;
 }
 
+.text-centre {
+  text-align: center;
+}
+
 /*
 *    HEADER.HTML
 */
 
 .navbar-toggler {
-  background-color: white;
+  background-color: $light;
 }
 
 header {
@@ -73,7 +77,7 @@ header {
 }
 
 .main-header {
-  color: white !important;
+  color: $light;
   text-shadow: 4px 4px 2px black;
   font-family: $main-heading-font;
 }
@@ -83,9 +87,14 @@ header {
 }
 
 .nav-item a {
-  color: white !important;
-  font-family: $main-heading-font !important;
+  color: $light;
+  font-family: $main-heading-font;
   text-shadow: 3px 3px 2px black;
+}
+
+.nav-item a:hover {
+  color: $navbar-hover-color;
+  text-decoration: none;
 }
 
 /*
