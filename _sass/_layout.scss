@@ -56,19 +56,36 @@ main {
 *    HEADER.HTML
 */
 
+.navbar-toggler {
+  background-color: white;
+}
+
 header {
-    background-color: $header;
+    //background-color: $header;
+    background-image: url("../img/header.png");
     padding: 0px 15px;
-	text-align: center;
-	margin: 0 0 0;
-	height: 50vh;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+    text-align: center;
+	  margin: 0 0 0;
+	  height: 50vh;
+	  display: flex;
+	  justify-content: center;
+	  align-items: center;
+}
+
+.main-header {
+  color: white !important;
+  text-shadow: 4px 4px 2px black;
+  font-family: $main-heading-font;
 }
 
 .nav-item {
-    padding-right: 10px;
+    padding-right: 13px;
+}
+
+.nav-item a {
+  color: white !important;
+  font-family: $main-heading-font !important;
+  text-shadow: 3px 3px 2px black;
 }
 
 /*
