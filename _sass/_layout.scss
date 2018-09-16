@@ -66,14 +66,24 @@ main {
 
 header {
     //background-color: $header;
+    max-width: $header-width;
     background-image: url("../img/header.png");
+    background-repeat: no-repeat;
+    background-position: center;
     padding: 0px 15px;
     text-align: center;
-	  margin: 0 0 0;
+	  //margin: 0 0 0;
 	  height: 50vh;
 	  display: flex;
 	  justify-content: center;
 	  align-items: center;
+}
+
+@media screen and (min-width: $header-width) {
+  header {
+    margin: auto;
+    border-radius: 20px;
+  }
 }
 
 .main-header {
