@@ -37,7 +37,7 @@ tags:
 ---
 
 <!--Tags menu-->
-<ul class = "tags">
+<ul class = "portfolio-tags">
     {% for tag in page.tags %}
 
     <li><a href onclick="filter('{{ tag }}'); return false;">{{ tag }}</a></li>
@@ -116,7 +116,7 @@ tags:
 
     <!--Project Tags-->
     <h6>Tags</h6>
-    <ul class="tags">
+    <ul class="project-tags">
         {% for tag in project.tags %}
             <li>{{tag}}</li>
         {% endfor %}
