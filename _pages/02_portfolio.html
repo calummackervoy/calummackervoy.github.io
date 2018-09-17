@@ -2,9 +2,57 @@
 layout: page
 title: Portfolio
 permalink: /portfolio/
+
+tags:
+  - Android
+  - iOS
+  - Server
+  - Client
+  - Website
+  - Desktop
+  - Game
+  - GPU
+  - AI
+  - Machine Learning
+  - Operating System
+  - IoT
+  - JavaScript
+  - TypeScript
+  - Ionic
+  - Angular
+  - CSS
+  - PHP
+  - Java
+  - Hibernate
+  - C#
+  - .NET
+  - Unity
+  - Python
+  - Django
+  - SQL
+  - C/C++
+  - NesC
+  - TinyOS
+  - Assembly
 ---
 
+<!--Tags menu-->
+<ul class = "tags">
+    {% for tag in page.tags %}
+
+    <li><a href onclick="filter('{{ tag }}'); return false;">{{ tag }}</a></li>
+
+    {% endfor %}
+</ul>
+
+{% assign search_tag = "" %}
+
+<!--List of projects-->
 {% for project in site.projects %}
+
+<!--only display project if there is no active search or-->
+
+{% if search_tag == "" or project.tags contains search_tag %}
 <div id="{{project.identifier}}" class="project card">
     <div class="card-block">
     <!--Project Heading-->
@@ -80,4 +128,5 @@ permalink: /portfolio/
     {% endif %}
     </div>
 </div>
+{% endif %}
 {% endfor %}
