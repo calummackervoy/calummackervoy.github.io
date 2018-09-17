@@ -17,17 +17,17 @@ function activateTag(tag) {
     //clear all tags in list of tag-active class
     var items = document.getElementsByClassName('tag-item');
     for(var i=0; i < items.length; i++) {
-        items[i].setAttribute('class', 'tag-item');
+        items[i].classList.remove("tag-active");
     }
 
     // set the selected tag's item to active
     var item = document.getElementById(tag + '-item');
     if(item) {
-        item.setAttribute('class', 'tag-item tag-active');
+        item.classList.add("tag-active");
     }
 }
 
 //function applies filters to projects, hiding any deselected
 function filter() {
-    //alert("active tag is " + activeTag);
+    
 }
