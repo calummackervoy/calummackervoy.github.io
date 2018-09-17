@@ -180,7 +180,7 @@ header {
   margin-bottom: 5px;
 }
 
-.portfolio-tags li {
+.tag-item {
   display: inline; /*display the elements on one line*/
   line-height: 2.25;
   margin-right: 2px; /*ensure the elements are clearly separate*/
@@ -188,6 +188,11 @@ header {
   padding: 5px;
   border-radius: 3px;
   background-color: $tag-bg;
+}
+
+//a tag which has been selected
+.tag-active {
+  background-color: $tag-bg-active !important;
 }
 
 .project {

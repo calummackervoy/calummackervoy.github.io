@@ -37,10 +37,13 @@ tags:
 ---
 
 <!--Tags menu-->
+<p>Select tag(s) below to filter projects in the portfolio</p>
 <ul class = "portfolio-tags">
     {% for tag in page.tags %}
 
-    <li><a href onclick="filter('{{ tag }}'); return false;">{{ tag }}</a></li>
+    <li class="tag-item" id="{{ tag }}-item">
+        <a href onclick="selectTag('{{ tag }}'); return false;">{{ tag }}</a>
+    </li>
 
     {% endfor %}
 </ul>
