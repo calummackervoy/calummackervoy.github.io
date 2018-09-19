@@ -152,11 +152,26 @@ header {
 }
 
 .spotlight-image {
-  
+  border-radius: 10px;
 }
 
 .spotlight-text {
   text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+@media screen and (max-width: 1100px) {
+  .spotlight-project {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .spotlight-project {
+    clear: both;
+    width: 100%;
+  }
 }
 
 /*
