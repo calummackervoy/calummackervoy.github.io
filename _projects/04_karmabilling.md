@@ -1,6 +1,6 @@
 ---
 identifier: karmabilling
-title: Billing System for <a href="http://karmacomputing.co.uk/">Karma Computing</a>
+title: Automated Billing System &amp; CRM for <a href="http://karmacomputing.co.uk/">Karma Computing</a>
 
 image_count: 0
 
@@ -14,4 +14,10 @@ tags:
     - Python
     - JavaScript
     - SQL
+
+is_spotlight: true
+spotlight_img_source: '/assets/img/medium/server.jpg'
+spotlight_img_alt: Image of a server
+spotlight_text: Automated billing system and CRM
+
 ---

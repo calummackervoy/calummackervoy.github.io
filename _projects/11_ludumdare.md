@@ -16,4 +16,9 @@ tags:
     - C#
     - .NET
     - Unity
+
+is_spotlight: true
+spotlight_img_source: '/assets/img/medium/titlegame_preview.PNG'
+spotlight_img_alt: Screenshot of the game
+spotlight_text: TITLE, Game in Unity
 ---

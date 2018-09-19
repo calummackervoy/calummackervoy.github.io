@@ -24,4 +24,9 @@ tags:
     - JavaScript
     - TypeScript
     - CSS
+
+is_spotlight: true
+spotlight_img_source: '/assets/img/medium/filmfest_preview.png'
+spotlight_img_alt: Screenshot of the Film Festival iOS app
+spotlight_text: Newcastle Film Festival app
 ---

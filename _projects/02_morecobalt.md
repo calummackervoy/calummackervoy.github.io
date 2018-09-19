@@ -16,4 +16,10 @@ tags:
     - JavaScript
     - TypeScript
     - CSS
+
+is_spotlight: true
+spotlight_img_source: '/assets/img/medium/cobalt_preview.jpg'
+spotlight_img_alt: Screenshot of the MoreCobalt iOS app
+spotlight_text: MoreCobalt business park app
+
 ---

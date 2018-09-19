@@ -31,17 +31,16 @@ noPageTitle: true
     <div class="col-12 text-center">
         <h3>My Work</h3>
     </div>
-    <div class="col-sm-4">
-
-    </div>
-    <div class="col-sm-4">
-        
-    </div>
-    <div class="col-sm-4">
-        
-    </div>
+    {% for project in site.projects %}
+        {% if project.is_spotlight == true %}
+            <div class="spotlight-project">
+                <img class="spotlight-image" src="{{ project.spotlight_img_source | absolute_url }}" alt="{{project.spotlight_img_alt}}" />
+                <p>{{project.spotlight_text}}</p>
+            </div>
+        {% endif %}
+    {% endfor %}
     <div class="col-12 text-center">
-        <p>More in <a href="{{ '/portfolio' | prepend: site.baseurl }}">Portfolio</a></p>
+        <p style="font-size: 22px; font-weight: bold;">More in <a href="{{ '/portfolio' | prepend: site.baseurl }}">Portfolio</a></p>
     </div>
 </div>
 

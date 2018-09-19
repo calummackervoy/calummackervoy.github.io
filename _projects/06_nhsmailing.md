@@ -11,4 +11,9 @@ tags:
     - Server
     - Client
     - SQL
+
+is_spotlight: true
+spotlight_img_source: '/assets/img/medium/server_2.jpg'
+spotlight_img_alt: Image of a server
+spotlight_text: Mailing List Management in the NHS
 ---
