@@ -27,15 +27,21 @@ noPageTitle: true
 </div>
 
 <!--Work Showcase-->
-<div class="row">
+<div class="row spotlight-container">
     <div class="col-12 text-center">
         <h3>My Work</h3>
     </div>
     {% for project in site.projects %}
         {% if project.is_spotlight == true %}
             <div class="spotlight-project">
-                <img class="spotlight-image" src="{{ project.spotlight_img_source | absolute_url }}" alt="{{project.spotlight_img_alt}}" />
-                <p>{{project.spotlight_text}}</p>
+                <a href="{{ project.identifier | prepend: '/portfolio/#' | prepend: site.baseurl }}">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <img class="spotlight-image" src="{{ project.spotlight_img_source | absolute_url }}" alt="{{project.spotlight_img_alt}}" />
+                    </div>
+                </div>
+                <p class="spotlight-text">{{project.spotlight_text}}</p>
+                </a>
             </div>
         {% endif %}
     {% endfor %}

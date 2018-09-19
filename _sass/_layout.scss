@@ -142,9 +142,21 @@ header {
 /*
 *     INDEX.HTML CSS
 */
+.spotlight-container {
+  margin: 5px 5px 5px 5px;
+}
+
 .spotlight-project {
-  width: 30vw;
+  width: 33%;
   float: left;
+}
+
+.spotlight-image {
+  
+}
+
+.spotlight-text {
+  text-align: center;
 }
 
 /*
