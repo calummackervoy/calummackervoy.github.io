@@ -139,9 +139,25 @@ header {
   margin-bottom: 10px;
 }
 
+.page-content-container hr {
+  width: 80vw;
+  margin: auto;
+}
+
 /*
 *     INDEX.HTML CSS
 */
+.intro-container {
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  max-width: 80%;
+}
+
+.intro-image {
+  border-radius: 20px;
+}
+
 .spotlight-container {
   margin: 5px 5px 5px 5px;
 }
@@ -149,6 +165,7 @@ header {
 .spotlight-project {
   width: 33%;
   float: left;
+  margin-bottom: 20px;
 }
 
 .spotlight-image {

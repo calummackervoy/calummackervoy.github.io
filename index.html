@@ -4,12 +4,12 @@ noPageTitle: true
 ---
 
 <!--What I do..-->
-<div class="row">
-    <div class="col-sm-6">
-        <p>IMAGE</p>
+<div class="row intro-container">
+    <div class="col-md-6 text-center">
+        <img class="intro-image" src="{{ '/assets/img/intro.jpg' | absolute_url }}" alt="Image of some app screen designs" />
     </div>
-    <div class="col-sm-6">
-        <h3>What I do...</h3>
+    <div class="col-md-6">
+        <h2>What I do...</h2>
         <p>
             I provide solutions for apps, websites, games, systems and everything in between.
         </p>
@@ -29,8 +29,8 @@ noPageTitle: true
 <!--Work Showcase-->
 <hr/>
 <div class="row spotlight-container">
-    <div class="col-12 text-center">
-        <h3>My Work</h3>
+    <div class="col-12 text-center" style="margin-bottom: 20px">
+        <h2>My Work</h2>
     </div>
     {% for project in site.projects %}
         {% if project.is_spotlight == true %}
