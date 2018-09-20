@@ -3,7 +3,21 @@ identifier: morecobalt
 title: More Cobalt
 website: https://www.morecobalt.co.uk/
 
-image_count: 0
+image_count: 6
+image_source: 
+    - '/assets/img/medium/cobalt_1.png'
+    - '/assets/img/medium/cobalt_2.png'
+    - '/assets/img/medium/cobalt_3.png'
+    - '/assets/img/medium/cobalt_4.png'
+    - '/assets/img/medium/cobalt_5.png'
+    - '/assets/img/medium/cobalt_6.png'
+image_alt:
+    - Screenshot of the home screen
+    - Screenshot of the map feature
+    - Screenshot of the bus timetable feature
+    - Screenshot of the login screen
+    - Screenshot of the tutorial screen
+    - Screenshot of the settings screen
 
 paras:
     - Developed an employee-perks app with <a href="https://nebulalabs.co.uk/">Nebula Labs</a> for Cobalt business park, Newcastle. Stands out for the following features
