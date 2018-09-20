@@ -18,7 +18,8 @@ email: c.mackervoy@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   
 baseurl: ""
-url: "http://localhost:4000"
+#url: "http://localhost:4000"
+url: "http://calum.mackervoy.com"
 twitter_username: calummackervoy
 github_username:  calummackervoy
 
