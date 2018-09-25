@@ -56,7 +56,14 @@ tags:
 
 <!--only display project if there is no active search or-->
 
+<!--display new row every two projects-->
+{% assign mod = forloop.index0 | modulo:2 %}
+{% if mod == 0 %}
+<div class="row project-row">
+{% endif %}
+
 {% if search_tag == "" or project.tags contains search_tag %}
+<div class="col-md-6 project-col">
 <div id="{{project.identifier}}" class="project card">
     <div class="card-block">
     <!--Project Heading-->
@@ -119,18 +126,30 @@ tags:
     {% endif %}
 
     <!--Project Tags-->
-    <h6>Tags</h6>
-    <ul class="project-tags">
-        {% for tag in project.tags %}
-            <li>{{tag}}</li>
-        {% endfor %}
-    </ul>
+    <div class="project-tags-container">
+        <h6>Tags</h6>
+        <ul class="project-tags">
+            {% for tag in project.tags %}
+                <li>{{tag}}</li>
+            {% endfor %}
+        </ul>
 
-    <!--Project License-->
-    {% if project.license %}
-        <p>License: {{project.license}}</p>
-    {% endif %}
+        <!--Project License-->
+        {% if project.license %}
+            <p>License: {{project.license}}</p>
+        {% endif %}
+    </div>
     </div>
 </div>
+</div>
 {% endif %}
+
+{% if mod == 1 %}
+</div>
+{% endif %}
+
 {% endfor %}
+
+{% if mod == 0 %}
+</div>
+{% endif %}

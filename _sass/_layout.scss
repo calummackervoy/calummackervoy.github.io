@@ -260,12 +260,22 @@ header {
   background-color: $tag-bg-active !important;
 }
 
+.project-row {
+  padding: 0;
+}
+
+.project-col {
+  padding: 0;
+  margin-bottom: 20px;
+  //width: 98%;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
 .project {
   margin-bottom: 20px;
   padding: 10px;
-  /*border: 1px solid $font-color;
-  border-radius: 10px;*/
-  //background-color: green;
+  height: 100%;
 }
 
 .project-image-container {
