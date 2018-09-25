@@ -16,7 +16,7 @@ tags:
     - SQL
 
 is_spotlight: true
-spotlight_img_source: '/assets/img/medium/server.jpg'
+spotlight_img_source: '/assets/img/medium/server_2.jpg'
 spotlight_img_alt: Image of a server
 spotlight_text: Automated billing system and CRM
 
