@@ -288,6 +288,21 @@ header {
   padding-left: 15px;
 }
 
+
+//on larger screens making sure tags in opposite columns appear at same level
+@media screen and (min-width: 768px) {
+  .project {
+    padding-bottom: 100px;
+  }
+
+  .project-top {
+    height: 90%;
+  }
+  .project-bottom {
+    height: 10%;
+  }
+}
+
 .project-tags {
   list-style: none;
   margin-bottom: 5px;

@@ -65,7 +65,7 @@ tags:
 {% if search_tag == "" or project.tags contains search_tag %}
 <div class="col-md-6 project-col">
 <div id="{{project.identifier}}" class="project card">
-    <div class="card-block">
+    <div class="project-top">
     <!--Project Heading-->
     <h2 class="card-title" style="margin: auto">
         {% if project.website %}<a href="{{project.website}}">{{project.title}}</a>
@@ -124,9 +124,10 @@ tags:
         {% endfor %}
         </div>
     {% endif %}
+    </div>
 
     <!--Project Tags-->
-    <div class="project-tags-container">
+    <div class="project-bottom">
         <h6>Tags</h6>
         <ul class="project-tags">
             {% for tag in project.tags %}
@@ -138,7 +139,6 @@ tags:
         {% if project.license %}
             <p>License: {{project.license}}</p>
         {% endif %}
-    </div>
     </div>
 </div>
 </div>
