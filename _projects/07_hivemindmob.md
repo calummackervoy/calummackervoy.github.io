@@ -24,5 +24,5 @@ tags:
     - Python
     - Django
 
-license: GPLv3 License
+license: GPLv3
 ---
