@@ -19,5 +19,5 @@ tags:
     - TypeScript
     - CSS
 
-license: GPLv3 License
+license: GPLv3
 ---
