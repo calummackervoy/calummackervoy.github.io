@@ -322,3 +322,61 @@ header {
   border-radius: 3px;
   background-color: $tag-bg;
 }
+
+/*
+*   BLOG
+*/
+.post-card {
+  border-radius: 20px;
+  position: relative;
+  display: inline-block;
+  margin: 20px;
+  height: 600px;
+
+  .post-text {
+    position: absolute;
+    z-index: 999;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: 35%; /* Adjust this value to move the positioned div up and down */
+    text-align: center;
+    width: 60%; /* Set the width of the positioned div */
+    background-color: rgba(255,255,255,0.6);
+
+    .post-title {
+      font-family: $post-heading-font;
+      color: $post-heading-font-color;
+    }
+    
+    .post-summary {
+      font-weight: bold;
+      color: $post-heading-font-color;
+    }
+  }
+
+  .post-text:hover {
+    background-color: rgba(255,255,255,0.8);
+  }
+
+  .post-header-image {
+    border-radius: 20px;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+.post {
+  padding: 20px;
+
+  .post-heading {
+    margin-bottom: 20px;
+  }
+
+  .entry {
+    padding-left: 10vw;
+    padding-right: 10vw;
+    padding-top: 30px;
+  }
+}

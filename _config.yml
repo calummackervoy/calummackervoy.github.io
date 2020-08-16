@@ -30,10 +30,26 @@ include: ['_pages']
 kramdown:
   input: GFM
 collections:
-- projects
+  projects:
+    output: false
+  posts:
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+    values:
+      layout: "page"
 
 # Build settings
-markdown: kramdown
+redcarpet:
+  extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "tables", "strikethrough", "superscript", "with_toc_data"]
+markdown: redcarpet
 plugins:
   - jekyll-feed
   - jekyll-redirect-from
