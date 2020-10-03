@@ -377,4 +377,14 @@ header {
     padding-right: 10vw;
     padding-top: 30px;
   }
+
+  .blog-full-image {
+    display: block; margin-left: auto; margin-right: auto; width: 75%;
+  }
+  
+  @media screen and (min-width: 300px) and (max-width: 462px) {
+    .blog-full-image {
+      width: 95%;
+    }
+  }
 }

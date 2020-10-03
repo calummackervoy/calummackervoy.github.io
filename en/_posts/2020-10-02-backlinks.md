@@ -12,8 +12,7 @@ In the build-up to the release of version 0.7, we have been working on a system 
 
 Imagine that we have a federated network consisting of two servers, Paris and Nantes:
 
-<img src="{{ '/assets/img/post_assets/backlinks/1.png' | absolute_url }}"
-     style="display: block; margin-left: auto; margin-right: auto; width: 50%"/>
+<img src="{{ '/assets/img/post_assets/backlinks/1.png' | absolute_url }}" class="blog-full-image"/>
 <p class="image-caption">figure 1: Paris and Nantes</p>
 
 Each of these instances serve a [Startin'Blox](https://startinblox.com/en/) application to users, a front-end framework which pulls in federated resources and serves these to the user. Now take for example that we have the following Django models:
@@ -34,8 +33,7 @@ class CircleMember(Model):
 
 I have a user, Bob, which has an account on Paris. He's a member of a bunch of Circles on Paris with his friends, but he's just found a super-cool Circle on Nantes, and he's decided to spread his social wings a bit:
 
-<img src="{{ '/assets/img/post_assets/backlinks/2.png' | absolute_url }}"
-     style="display: block; margin-left: auto; margin-right: auto; width: 75%"/>
+<img src="{{ '/assets/img/post_assets/backlinks/2.png' | absolute_url }}" class="blog-full-image"/>
 <p class="image-caption">figure 2: Bob joins a circle in Nantes</p>
 
 Nantes is able to authenticate Bob's Parisian token using our built-in [OIDC](https://auth0.com/docs/protocols/oidc) provider, and it adds Bob to the circle as he requested. However, Bob's account, nested in Paris, has no idea that he's a member of this circle! When Startin'Blox pings a request to https://paris.startinblox.com/users/bob/circles/, the Nantes circle is not listed! And so Nantes needs to let Paris know of this event. Our solution will need to be based on the DjangoLDP `Model`, so that the same code will detect and notify Paris of a reference to Circle, CircleMember, and any other kind of linked data.
@@ -44,8 +42,7 @@ Nantes is able to authenticate Bob's Parisian token using our built-in [OIDC](ht
 
 Nantes is able to detect that it has something to say to Paris because a user with a Parisian urlid (https://paris.startinblox.com/users/bob/) has been connected to a local resource. From here it is able to discover Bob's inbox (see the [Linked Data Notifications spec](https://www.w3.org/TR/ldn/))
 
-<img src="{{ '/assets/img/post_assets/backlinks/3.png' | absolute_url }}"
-     style="display: block; margin-left: auto; margin-right: auto; width: 75%"/>
+<img src="{{ '/assets/img/post_assets/backlinks/3.png' | absolute_url }}" class="blog-full-image"/>
 <p class="image-caption">figure 3: Nantes sends Paris a backlink</p>
 
 For the content of the notification, we use the [ActivityStreams](https://www.w3.org/TR/activitystreams-vocabulary/) format, which allows for a common language describing interactions between Objects. To define the object we use an [Resource Description Framework (RDF) ontology](https://www.w3.org/RDF/), which allows us to describe the semantics of the objects we're sending. For example encoded in the `"@type": "hd:circle"` is a reference to an RDF document (which we would reference in the `@context`) describing the properties which make up a circle. In this way we can use RDF to link applications together who may store circles in different ways, but agree at least on what a 'circle' is. The recipient might not even be using DjangoLDP at all!
