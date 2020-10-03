@@ -15,6 +15,13 @@ img {
   max-width: 100%;
 }
 
+.image-caption {
+  text-align: center;
+  margin-bottom: 20px;
+  color: $lighter-font-color;
+  font-style: italic;
+}
+
 #container {
   max-width: 100%;
 }
@@ -260,23 +267,6 @@ header {
   background-color: $tag-bg;
 }
 
-//a tag which has been selected
-.tag-active {
-  background-color: $tag-bg-active !important;
-}
-
-.project-row {
-  padding: 0;
-}
-
-.project-col {
-  padding: 0;
-  margin-bottom: 20px;
-  //width: 98%;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
 .project {
   margin-bottom: 20px;
   padding: 10px;
@@ -359,11 +349,19 @@ header {
     background-color: rgba(255,255,255,0.8);
   }
 
+  /*background version*/
   .post-header-image {
     border-radius: 20px;
     height: 100%;
     width: 100%;
     object-fit: cover;
+  }
+
+  /*header version*/
+  .post-top-image {
+    border-radius: 20px;
+    height: 100%;
+    width: 100%;
   }
 }
 
