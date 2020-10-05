@@ -141,6 +141,22 @@ header {
   }
 }
 
+// FOOTER.HTML
+.lang-options {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 30px;
+
+  ul {
+    list-style: none;
+
+    li {
+      display: inline; /*display the elements on one line*/
+      margin-left: 10px;
+    }
+  }
+}
+
 /*
 *     PAGE.HTML
 */

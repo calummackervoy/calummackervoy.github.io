@@ -2,6 +2,8 @@
 
 title: Building a Framework for Federated Networks
 summary: Using Relational Databases, Django and ActivityStreams
+lang: en
+lang-ref: backlinks
 
 header_image: '/assets/img/post_headers/sky.jpg'
 ---

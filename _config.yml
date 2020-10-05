@@ -57,6 +57,12 @@ plugins:
 whitelist:
   - jekyll-redirect-from
 
+languages:
+  en:
+    label: English
+  fr:
+    label: Français
+
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.

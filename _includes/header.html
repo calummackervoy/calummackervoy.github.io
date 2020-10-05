@@ -8,10 +8,18 @@
         <!-- links (for navigation bar)-->
         <div class = "collapse navbar-collapse navbarSupportedContent">
             <ul class = "navbar-nav mr-auto" role="navigation">
+                {% assign lang = page.lang | default: 'en' %}
+                {% if lang == 'fr' %}
+                <li class="nav-item">
+                    <a href="{{ '/fr/' | prepend: site.baseurl | prepend: site.url }}">Acceuil</a>
+                </li>
+                {% else %}
                 <li class="nav-item">
                     <a href="{{ '/' | prepend: site.baseurl | prepend: site.url }}">Home</a>
                 </li>
-                {% for page in site.pages %} {% if page.title %}
+                {% endif %}
+                {% assign pages_list = site.pages | where:"lang", lang %}
+                {% for page in pages_list %} {% if page.title %}
                 <li class="nav-item">
                     <a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
                 </li>

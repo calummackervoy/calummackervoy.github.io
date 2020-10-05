@@ -1,7 +1,7 @@
 ---
 layout: page
 noPageTitle: true
-lang: en
+lang: fr
 lang-ref: index
 ---
 
@@ -11,19 +11,18 @@ lang-ref: index
         <img class="intro-image" src="{{ '/assets/img/intro.jpg' | absolute_url }}" alt="Image of some app screen designs" />
     </div>
     <div class="col-md-6">
-        <h2>What I do...</h2>
+        <h2>Ce Que Je Fais</h2>
         <p>
-            I provide solutions for apps, websites, games, systems and everything in between.
+            Je fournis des solutions pour des applications, des sites web, des jeux, des systèmes et tout ce qui se trouve entre les deux.
         </p>
         <p>
-            I can help with existing projects or manage development from scratch.
+            Je peux vous aider avec les projets existant ou démarrer les projets de rien.
         </p>
         <p>
-            I am well-connected with other developers in the area, and frequently collaborate with others. This means
-            that I can provide for bigger projects and bring in developers with specialist skills.
+            Je suis bien connecté avec les autres developpeurs, particulairement de les co-opératives Anglaises et Française. Je travaille avec des autres souvent, et par co-opération je peux fournir pour les besoins plus grands, et les besoins des spécialistes.
         </p>
         <p>
-            To get a quote, or discuss a project, please <a href="{{ '/contact' | prepend: site.baseurl }}">get in touch</a>.
+            Pour recevoir un devi, ou discuter un projet, s'il vous plaît <a href="{{ '/fr/contact' | prepend: site.baseurl }}"></a>moi-contactez</a>.
         </p>
     </div>
 </div>
@@ -35,12 +34,12 @@ lang-ref: index
 <hr/>
 <div class="row spotlight-container">
     <div class="col-12 text-center" style="margin-bottom: 20px">
-        <h2>My Work</h2>
+        <h2>Mon Travail</h2>
     </div>
     {% for project in site.projects %}
         {% if project.is_spotlight == true %}
             <div class="spotlight-project">
-                <a href="{{ project.identifier | prepend: '/portfolio/#' | prepend: site.baseurl }}">
+                <a href="{{ project.identifier | prepend: '/fr/portfolio/#' | prepend: site.baseurl }}">
                 <div class="row">
                     <div class="col-12 text-center">
                         <img class="spotlight-image" src="{{ project.spotlight_img_source | absolute_url }}" alt="{{project.spotlight_img_alt}}" />
@@ -52,7 +51,7 @@ lang-ref: index
         {% endif %}
     {% endfor %}
     <div class="col-12 text-center">
-        <p style="font-size: 24px; font-weight: bold; margin-top: 20px;">More in <a href="{{ '/portfolio' | prepend: site.baseurl }}">Portfolio</a></p>
+        <p style="font-size: 24px; font-weight: bold; margin-top: 20px;">Plus des projets au <a href="{{ '/fr/portfolio' | prepend: site.baseurl }}">Portfolio</a></p>
     </div>
 </div>
 <hr/>
