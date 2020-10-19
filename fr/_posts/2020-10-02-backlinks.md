@@ -1,6 +1,6 @@
 ---
 
-title: La Construction d'un Framework pour les Reseaus Fédéré
+title: La Construction d'un Framework pour les Reseaux Fédérés
 summary: En Utilisant des Bases de Données Relationelles, Django et ActivityStreams
 lang: fr
 lang-ref: backlinks
@@ -8,16 +8,16 @@ lang-ref: backlinks
 header_image: '/assets/img/post_headers/sky.jpg'
 ---
 
-Novembre 2019 j'ai débuté travailler sur [DjangoLDP](https://git.startinblox.com/djangoldp-packages/djangoldp), c'est un framework qui repose sur Django Rest Framework et permet à notre utilisateurs de créer des applications Django interiopérable, avec les standardes de [Linked-Data Protocol](https://www.w3.org/TR/ldp/) (LDP). Du coup, le fédération est le connexion des serveurs qui utilisent les stacks différents avec une protocol standarde, afin que le service soit le même pour tous. On peut construire un web **décentralisé**, en revendiquant le pouvoir des monopoles et le restituant aux utilisateurs.
+Novembre 2019 j'ai commencé à travailler sur [DjangoLDP](https://git.startinblox.com/djangoldp-packages/djangoldp). C'est un framework qui repose sur Django Rest Framework et permet à notre utilisateurs de créer des applications Django interiopérables, avec les standards de [Linked-Data Protocol](https://www.w3.org/TR/ldp/) (LDP). Du coup, le fédération est la connexion des serveurs qui utilisent les stacks différents avec une protocole standard, afin que le service soit le même pour tous. On peut construire un web **décentralisé**, en revendiquant le pouvoir des monopoles et en le restituant aux utilisateurs.
 
-Pour la publication de la version 0.7, nous travaillions sur une système permettant les instances de tenir leurs pairs au courant, pour fournir la cohérence dans un réseau fédéré.
+Pour la publication de la version 0.7, nous travaillons sur un système permettant aux instances de tenir leurs pairs au courant, pour apporter du cohérence dans un réseau fédéré.
 
-Imaginez que nous avons un réseau qui consiste de deux serveurs, "Paris", et "Nantes":
+Imaginez que nous avons un réseau constitué de deux serveurs, "Paris", et "Nantes":
 
 <img src="{{ '/assets/img/post_assets/backlinks/1.png' | absolute_url }}" class="blog-full-image"/>
 <p class="image-caption">chiffre 1: Paris et Nantes</p>
 
-Les deux fournissent une application [Startin'Blox](https://startinblox.com/fr/), qui est un framework front-end pour servir les resources fédérés à l'utilisateur. Par example, si nous avons les modèles suivant:
+Les deux fournissent une application [Startin'Blox](https://startinblox.com/fr/), qui est un framework front-end pour servir les ressources fédérées à l'utilisateur. Par exemple, si nous avons les modèles suivant:
 
 ```python
 from django.conf import settings
@@ -32,23 +32,23 @@ class CircleMember(Model):
     
 ```
 
-Il y a un utilisateur, Bob, qui a une compte avec Paris. Il est une membre de plusiers Cercles sur Paris avec ses amis. Il vien de trouver un Cercle super cool de Nantes, et il veut le rejoindre
+Il y a un utilisateur, Bob, qui a un compte avec Paris. Il est membre de plusieurs Cercles sur Paris avec ses amis. Il vient de trouver un Cercle super cool sur Nantes, et il veut le rejoindre
 
 <img src="{{ '/assets/img/post_assets/backlinks/2.png' | absolute_url }}" class="blog-full-image"/>
 <p class="image-caption">chiffre 2: Bob rejoind un cercle de Nantes</p>
 
-Nantes peut authentifier le jeton Parisien de Bob en utilisant le fournisseur [OIDC](https://auth0.com/docs/protocols/oidc), et il ajoute Bob comme il a demandé. Mais son compte, stocké à Paris, n'a aucune idée que il est un membre de cet cercle! Quand Startin'Blox envoye un demande à https://paris.startinblox.com/users/bob/circles/, le nouveau cercle de Nantes ne serait pas enregistré ici! Donc il faut que Nantes fait-savoir Paris de cet evenemnent.
+Nantes peut authentifier le jeton Parisien de Bob en utilisant le fournisseur [OIDC](https://auth0.com/docs/protocols/oidc), et il ajoute Bob comme il l'a demandé. Mais son compte, stocké à Paris, n'a aucune idée qu'il est membre de ce cercle! Quand Startin'Blox envoie une demande à https://paris.startinblox.com/users/bob/circles/, le nouveau cercle de Nantes ne sera pas enregistré ici! Donc il faut que Nantes fasse savoir cet evenement à Paris.
 
-Nous trouverions un solution qui utilise le DjangoLDP `Model`, afin de le même code marche avec tous les modèles connecté.
+Nous trouverons une solution qui utilise le DjangoLDP `Model`, afin que le même code marche avec tous les modèles connectés.
 
 ## Étape 1: La Demande
 
-Nantes est capable de détecter qu'il a besoin de notifier Paris, parce qu'un utilisateur avec un `urlid` Parisien (https://paris.startinblox.com/users/bob/) a été connecté à une resource locale.
+Nantes est capable de détecter qu'il a besoin de notifier quelque chose à Paris, parce qu'un utilisateur avec un `urlid` Parisien (https://paris.startinblox.com/users/bob/) a été connecté à une ressource locale.
 
 <img src="{{ '/assets/img/post_assets/backlinks/3.png' | absolute_url }}" class="blog-full-image"/>
-<p class="image-caption">figure 3: Nantes a envoyé Paris un activité</p>
+<p class="image-caption">chiffre 3: Nantes a envoyé Paris un activité</p>
 
-Pour le contenu de la notification, on utilise le format de [ActivityStreams](https://www.w3.org/TR/activitystreams-vocabulary/), qui fournit un langage commun pour décrire les actions entre différents objets. On utilise aussi une ontologie du [Resource Description Framework (RDF)](https://www.w3.org/RDF/), pour partager les donées sémantiques avec nos pairs. Par example, encodée dans `"@type": "hd:circle"` est une référence d'un document RDF (qui nous réferencons dans le champ `@context`) pour décrire les propriétés qui composent un cercle. De cette façon, on peut utiliser RDF pour connecter les applications qui peut stocker les cercles avec plusiers différentes manières, mais peuvent au moins convenir de ce qu'est un cercle. Il peut-être le récepteur n'utilise pas du tout DjangoLDP!
+Pour le contenu de la notification, on utilise le format de [ActivityStreams](https://www.w3.org/TR/activitystreams-vocabulary/), qui fournit un langage commun pour décrire les actions entre différents objets. On utilise aussi une ontologie du [Resource Description Framework (RDF)](https://www.w3.org/RDF/), pour partager les données sémantiques avec nos pairs. Par exemple, encoder dans `"@type": "hd:circle"` est une référence d'un document RDF (que nous référençons dans le champ `@context`) pour décrire les propriétés qui composent un cercle. De cette façon, nous pouvons utiliser le RDF pour relier entre elles des applications qui peuvent stocker des cercles de différentes façons, mais qui s'accordent au moins sur ce qu'est un "cercle". Le destinataire pourrait même ne pas utiliser du tout DjangoLDP !
 
 ```python
 {
@@ -71,29 +71,29 @@ Pour le contenu de la notification, on utilise le format de [ActivityStreams](ht
   ...
 }
 ```
-(Un Activité en format [JSON-LD](https://json-ld.org))
+(Une Activity en format [JSON-LD](https://json-ld.org))
 
-La demande celui-ci est crée par un fonction `build_object_tree`, qui construit le type et id de l'objet en bas, avant d'en répéter pour ses enfants.
+La requête est ici générée avec une fonction build_object_tree, qui construit le type et l'identifiant de l'objet de base, avant de faire de même pour chaque objet lié (à une profondeur de un). Notre récepteur peut cependant gérer des arbres avec une plus grande profondeur, grâce à une fonction récursive que nous aborderons plus tard. Selon la norme ActivityStreams, nous aurions également pu envoyer l'objet sérialisé avec juste un urlid, "object" : "https://nantes.startinblox.com/circle-members/1/", et le serveur de Paris pourrait déduire ses relations en effectuant une requête GET sur la ressource
 
 ## Étape 2: Le Récepteur
 
-Le `inbox` de Bob, fournit par le `InboxView` de le serveur Parisien, a maintenant reçu la Activity de Nantes. L'analyse d'une Activity se déroule comme suit :
+Le `inbox` de Bob, fourni par le `InboxView` du serveur Parisien, a maintenant reçu l'Activity de Nantes. L'analyse d'une Activity se déroule comme ci-dessous :
 
-1. validez la Activity
-2. analysez la Activity, en faisant les changements nécessaire
-3. répondez 201, avec la Activity enregistrée dans le header `Location` du réponse
+1. validez l'Activity
+2. analysez l'Activity, en faisant les changements nécessaire
+3. répondez 201, avec l'Activity enregistrée dans le header `Location` de la réponse
 
-### Validez la Activity
+### Validez l'Activity
 
-le validation de la Activity se compose de 3 parties :
+la validation de l'Activity se fait en 3 parties :
 
-* _authentification_ (validez que le serveur est celui qu'il prétend)
+* _authentification_ (valider que le serveur est celui qu'il prétend être)
 * _authorisation_ (Toulouse n'est pas capable de créer un cercle nantais)
-* validez les champs nécessaires et le contenu
+* valider les champs nécessaires et le contenu
 
-### Analysez la Activity
+### Analysez l'Activity
 
-La partie le plus amusant est l'analyse de la Activity. En DjangoLDP le `InboxView` se compose de les fonctions pour recevoir des différents types d'Activity. Mais dans le code, la star du spectacle est la fonction récursive `get_or_create_nested_backlinks`, qui analyserai un arbre de les objets et récursivement évalue chaque feuille par chercher un backlink existent ou en créer un nouveau.
+La partie la plus amusante est l'analyse de l'Activity. En DjangoLDP le `InboxView` se compose de fonctions pour recevoir des différents types d'Activity. Mais dans le code, la star de la série est une fonction récursive get_or_create_nested_backlinks, qui, étant donné un arbre d'objets imbriqués, va résoudre récursivement chaque nœud, en obtenant un backlink existant si possible, ou en en créant un. Elle est enveloppée dans une opération atomique de sorte que tout soit terminé avec succès, ou rien, en cas d'erreur.
 
 ```python
 for item in obj.items():
@@ -106,7 +106,7 @@ for item in obj.items():
   branches[item[0]] = backlink
 ```
 
-Celui-ci reconstruit un arbre de les sous-objets (envoyé en JSON) d'un arbre de les objets de les modèles de Django. Maintenant, l'application peut appeler `get_or_create` avec l'objet de base (pour ce profondeur de récursion) et retourner l'instance associé. La variation `get_or_create_external` fait le même, mais s'il reçoit un objet locale qui n'existe pas, il généra une exception (Nantes ne peut pas créer des résources Parisiens!)
+Il s'agit essentiellement de reconstituer l'arbre des sous-objets (envoyés en JSON) en un arbre d'objets Django que nous savons traiter. Maintenant, l'application peut appeler `get_or_create` avec l'objet de base (pour cette profondeur de récursion) et retourner l'instance associé. La variation `get_or_create_external` fait de même, mais s'elle reçoit un objet local qui n'existe pas, elle génère une exception (Nantes ne peut pas créer des ressources Parisiennes!)
 
 ```python
 # get or create the backlink
@@ -128,8 +128,12 @@ except ObjectDoesNotExist:
   raise Http404()
 ```
 
-Au milieu le code est responsable de la création de les `Follower`s nécessaires pour les resources de l'éxpediteur. Un suiveur est quel qu'un qui voudrait notifier de les changements sur les connexions de cette resource à la prochaine. Dans notre example, Paris voulait être notifiée que Bob avait rejoint un cercle de Nantes, mais si Bob supprimerait son compte Parisienne, Nante souhaite être informée aussi pour lui supprimer de son cercle.
+La partie centrale du code gère ici la création de Followers pour les ressources de l'expéditeur. Un suiveur est une boîte de réception qui s'abonne à la ressource et qui souhaite être informé des modifications futures de ses connexions. Dans notre exemple, Paris voulait être notifiée que Bob avait rejoint un cercle de Nantes, mais si Bob supprime son compte Parisien, Nantes devra également être informée qu'il doit être retiré de leur cercle.
 
 ## Le Résultat
 
-Bob peut maintenant se contenter de savoir que par une application il peut accéder ses cercles de Paris, Nantes, Londres et New York. En utilisant la bonne application il peut aussi accéder ses postes de médias sociaux d'une service qui n'a absolument aucun rapport avec DjangoLDP, grace aux standards du web semantique.
+Bob peut maintenant se contenter de savoir que par une application il peut accéder aux cercles de Paris, Nantes, Londres et New York. En utilisant la bonne application frontale, il a également pu accéder à ses posts sur les médias sociaux à partir d'un service totalement indépendant. Tout cela grâce à la puissance des standards du web sémantique comme Linked Data Protocol et ActivityStreams.
+
+J'ai décrit dans ce journal de développement comment fonctionne la fédération dans la version 0.7 de DjangoLDP. Au moment de la publication, elle est un peu dépassée et nous avons quelques nouveaux systèmes de pointe :-)
+
+Dans un prochain billet, je présenterai un nouveau ActivityQueueService, une file d'attente d'activité asynchrone que nous utilisons pour protéger la fédération des incohérences (par exemple, que se passe-t-il si Paris est hors ligne lorsque Bob rejoint un cercle à Nantes ?)
