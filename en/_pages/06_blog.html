@@ -15,11 +15,23 @@ tags:
 {% assign posts = site.posts | where: "lang", page.lang %}
 {% for post in posts %}
     <div class="post-card">
-        <img class="post-header-image" src="{{post.header_image}}" alt="a header image for the post"/>
+        {% if post.header_image != null %}
+            <img class="post-header-image" src="{{post.header_image}}" alt="a header image for the post"/>
+        {% else %}
+            <div class="post-header-image" />
+        {% endif %}
         <div class="post-text">
-            <a href="{{ post.url | prepend: site.baseurl }}">
+            {% if post.link %}
+                <a href="{{ post.link }}">
+            {% else %}
+                <a href="{{ post.url | prepend: site.baseurl }}">
+            {% endif %}
                 <h2 class="post-title">{{post.title}}</h2>
-                <h4 class="post-summary">{{post.summary}}</h4>
+                {% if post.announcement %}
+                    <p class="post-summary">{{post.summary}}</p>
+                {% else %}
+                    <h4 class="post-summary">{{post.summary}}</h4>
+                {% endif %}
                 <h5 class="post-date">{{ post.date | date: "%B %e, %Y" }}</h5>
             </a>
         </div>
