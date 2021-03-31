@@ -103,13 +103,13 @@ The code in `revive_activities` simply fetches any `ScheduledActivity` items on 
 
 ## Being Notified about Failure: Sentry.io
 
-Storing failed activities is great, but in the context of the federation a failed activity is an inconsistency in the collective data store, which may impact user experience. A perfect system would accommodate for retrying ancient activities for any server on a whitelist, or better still would utilise a _pull_ system where the previously-down server can notify its peers that it's back and ready to clean their previously failed activities.
+Storing failed activities is great, but in the context of the federation a failed activity is an inconsistency in the collective data store, which may impact user experience. A perfect system would accommodate for retrying ancient activities for any server on a whitelist, or better still would utilise a _pull_ system where the previously-down server can notify its peers that it's back and ready to clean their previously failed activities. The problem of bringing a server up to speed becomes difficult if it's been down for a long time and there have been many operations without it.
 
 For now this could involve human intervention, with the help of [Sentry.io](https://sentry.io/welcome/), a service dedicated to notifying developers and sysadmins of errors which have occured on any connected servers. Using this service, the call to `logger.error` will flag the event to the Sentry server, which will notify the admins who can then use extensive information stored about the activity to investigate the issue.
 
 ## Next
 
-This just about covers it for the second iteration of DjangoLDP's `ActivityStreams` system. In our next iteration we plan some new improvements, primarily for efficiency:
+This just about covers it for the second iteration of DjangoLDP's `ActivityStreams` system. In our next iteration we're discussing some new improvements, primarily for efficiency:
 <ul>
 <li>the optional backing of a broker such as Celery/Redis where the client prefers</li>
 <li>the replacement of `ScheduledActivity` with a filesystem-backed alternative, to avoid database access</li>
