@@ -5,7 +5,7 @@ summary: En Utilisant des Bases de Données Relationelles, Django et ActivityStr
 lang: fr
 lang-ref: backlinks
 
-header_image: '/assets/img/post_headers/sky.jpg'
+header_image: '/assets/img/post_headers/01.jpg'
 ---
 
 Novembre 2019 j'ai commencé à travailler sur [DjangoLDP](https://git.startinblox.com/djangoldp-packages/djangoldp). C'est un framework qui repose sur Django Rest Framework et permet à notre utilisateurs de créer des applications Django interiopérables, avec les standards de [Linked-Data Protocol](https://www.w3.org/TR/ldp/) (LDP). Du coup, le fédération est la connexion des serveurs qui utilisent les stacks différents avec une protocole standard, afin que le service soit le même pour tous. On peut construire un web **décentralisé**, en revendiquant le pouvoir des monopoles et en le restituant aux utilisateurs.

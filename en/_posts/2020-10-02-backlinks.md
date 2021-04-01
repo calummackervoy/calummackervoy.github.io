@@ -5,7 +5,7 @@ summary: Using Relational Databases, Django and ActivityStreams
 lang: en
 lang-ref: backlinks
 
-header_image: '/assets/img/post_headers/sky.jpg'
+header_image: '/assets/img/post_headers/01.jpg'
 ---
 
 Late 2019 I started working on [DjangoLDP](https://git.startinblox.com/djangoldp-packages/djangoldp), built upon Django Rest Framework to provide its users with a means to create interoperable, [Linked-Data](https://www.w3.org/TR/ldp/) Django applications ready for the semantic web. In short, federation is the connecting of multiple server instances so that the service provided to the user is consistent across multiple peers and databases, potentially using different technologies and structures. It allows us to build a **decentralised** platform over a community, taking power away from monopolies and giving it back to the users.
