@@ -1,4 +1,6 @@
 
+@import "collapse";
+
 body {
   width: 100vw;
   overflow-x: hidden !important;
@@ -403,6 +405,10 @@ header {
 
   .blog-full-image {
     display: block; margin-left: auto; margin-right: auto; width: 75%;
+  }
+
+  .blog-full-image-vertical {
+    display: block; margin-left: auto; margin-right: auto;
   }
   
   @media screen and (min-width: 300px) and (max-width: 462px) {
