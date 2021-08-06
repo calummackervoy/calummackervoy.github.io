@@ -338,8 +338,12 @@ header {
   border-radius: 20px;
   position: relative;
   display: inline-block;
-  margin: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-left: 5vw;
+  padding-right: 5vw;
   height: 600px;
+  width: 100%;
 
   .post-text {
     position: absolute;
