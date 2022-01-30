@@ -22,6 +22,7 @@ baseurl: ""
 url: "http://calum.mackervoy.com"
 twitter_username: calummackervoy
 github_username:  calummackervoy
+itch_url: https://calummackervoy.itch.io/
 
 # Build Settings
 sass:
