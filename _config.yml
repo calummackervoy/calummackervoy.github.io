@@ -63,6 +63,8 @@ languages:
     label: English
   fr:
     label: Français
+  es:
+    label: Español
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
