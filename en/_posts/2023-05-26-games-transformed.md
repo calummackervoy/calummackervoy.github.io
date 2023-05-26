@@ -24,9 +24,7 @@ If you're at the event, give it a go on the arcade machine, or if you're at home
 
 In the game you choose to give cards to the deck of one AI player or the other, then battle ensues. You might notice that some of the stuff that happens is unexpected, like a Bog Monster eating villagers from a place called Withering Heights or a knight deciding to pack it in and become a teacher. These actions happen because the characters are interacting with their world and have actions and events defined on them which impact the wider world. Everything being in linked data, the game can enact changes like eating villagers in the correct way even though it doesn't really know what that is. Last month I demonstrated how this works by [turning a character into a vampire, in a game that wasn't designed to know what a vampire is](https://calum.mackervoy.com/en/2023/04/03/mud-demo.html).
 
-<!--
 <img src="{{ '/assets/img/post_headers/games-transformed-2023.png' | absolute_url }}" class="blog-full-image" alt="A screenshot of the game" />
--->
 
 If you enjoyed making a card for the game and you're wondering how you can add to and enrich your character, or how you can add more complex spells and actions like eating nearby villagers, at this stage you'll need to get your hands dirty with writing JSON. If you're not scared away, then check out out the [documentation for creating cards](https://github.com/Multi-User-Domain/games-transformed-jam-2023/blob/master/docs/create.md). Don't be afraid to ask for help!
 
