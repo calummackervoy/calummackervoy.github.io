@@ -16,9 +16,9 @@ Please start by making a card at the following URL: [https://mud-card-generator.
 
 Now it's in the game!
 
-<img src="{{ '/assets/img/post_assets/games-transformed-2023/player-selection.png' | absolute_url }}" class="blog-full-image" alt="A screenshot of the player selection screen" />
-
 If you're at the event, give it a go on the arcade machine, or if you're at home then give it a go in the browser from the [Itch.io page](https://calummackervoy.itch.io/realm).
+
+<img src="{{ '/assets/img/post_assets/games-transformed-2023/player-selection.png' | absolute_url }}" class="blog-full-image" alt="A screenshot of the player selection screen" />
 
 In the game you choose to give cards to the deck of one AI player or the other, and watch the battle play out. You might notice that some of the stuff that happens is unexpected, like a Bog Monster eating villagers from a place called Withering Heights or a knight deciding to pack it in and become a teacher. These actions happen because the characters are interacting with their world and have actions and events defined on them which impact the wider world. The data is represented in Linked Data and follows an open standard which can be understood by other games and shared as the game is played and not at developer-time.
 
