@@ -12,7 +12,7 @@ The Commons is property that opens itself up to use by anyone, and which is owne
 
 I'd like to introduce you to our Games Transformed submission, Realm. In the spirit of anti-capitalist game jams and collective action, we hope to convince you that there is potential in building a Games Commons, it's like Wikipedia but for game content. Following on from past experiments, in this game players submit their own characters to be played as cards using an open standard which can be interoperable with other games. I'll get back to this, for now the best way to show you this is for you to play it.
 
-Please start by making a card at the following URL: [https://mud-card-generator.netlify.app/](https://mud-card-generator.netlify.app/). Please use images that are 512x512 (sorry, we ran out of time!)
+Start by making a card at the following URL: [https://mud-card-generator.netlify.app/](https://mud-card-generator.netlify.app/).
 
 <img src="{{ '/assets/img/post_assets/games-transformed-2023/card-generator.png' | absolute_url }}" class="blog-full-image" alt="A screenshot of the card creation process" />
 
