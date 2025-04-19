@@ -1,12 +1,12 @@
 
-@import "collapse";
+@use "base" as *;
+@use "collapse";
 
 body {
   width: 100vw;
   overflow-x: hidden !important;
-  //max-width: 100%;
-    margin: 0;
-    color: $font-color;
+  margin: 0;
+  color: $font-color;
 	font-family: $font-style;
 	font-size: 1.1em;
 	line-height: 1.6;
