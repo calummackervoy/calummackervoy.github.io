@@ -3,7 +3,7 @@ email: c.mackervoy@gmail.com
 description: Professional website of Calum Mackervoy
 baseurl: ""
 #url: "http://localhost:4000"
-url: "http://calum.mackervoy.com"
+url: "https://calum.mackervoy.com"
 twitter_username: calummackervoy
 github_username:  calummackervoy
 itch_url: https://calummackervoy.itch.io/
