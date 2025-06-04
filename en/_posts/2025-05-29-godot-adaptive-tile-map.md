@@ -51,7 +51,7 @@ Of course, in most games we would prefer not to have such harsh lines between ea
 
 Obtaining such a result involves creating a _tile set_ for each type of tile on the map, here we have water and grass. Instead of creating a single tile for grass and water that blends like the black and white of a chess board, we create many tiles for each tile type, blended with the different surrounding terrains. Take the example below:
 
-<img src="{{ '/assets/img/post_assets/godot-adaptive-tile-map/grass-water.png' | absolute_url }}" class="blog-full-image-vertical" alt="A set of tiles, 32x32, featuring many different versions of water and grass. One water tile, one grass tile, and many different compositions of water and grass" />
+<img src="{{ '/assets/img/post_assets/godot-adaptive-tile-map/grass-water.png' | absolute_url }}" class="blog-full-image-vertical" alt="A set of tiles, 32x32, featuring many different versions of water and grass: one water tile, one grass tile, and many different versions where water is bordered by grass on different sides" />
 
 In our game we will then select the tile to display based on the surrounding tiles. If the tiles to the right of this one are grass - but all other tiles are water, we will draw a version of the water with a grassy verge to the left, like in the tile highlighted below:
 
