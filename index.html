@@ -27,34 +27,3 @@ lang-ref: index
         </p>
     </div>
 </div>
-
-<!--Work Showcase-->
-<hr/>
-<div class="row spotlight-container">
-    <div class="col-12 text-center" style="margin-bottom: 20px">
-        <h2>My Work</h2>
-    </div>
-    {% for project in site.projects %}
-        {% if project.is_spotlight == true %}
-            <div class="spotlight-project">
-                <a href="{{ project.identifier | prepend: '/portfolio/#' | prepend: site.baseurl }}">
-                <div class="row">
-                    <div class="col-12 text-center">
-                        <img class="spotlight-image" src="{{ project.spotlight_img_source | absolute_url }}" alt="{{project.spotlight_img_alt}}" />
-                    </div>
-                </div>
-                <p class="spotlight-text">{{project.spotlight_text}}</p>
-                </a>
-            </div>
-        {% endif %}
-    {% endfor %}
-    <div class="col-12 text-center">
-        <p style="font-size: 24px; font-weight: bold; margin-top: 20px;">More in <a href="{{ '/portfolio' | prepend: site.baseurl }}">Portfolio</a></p>
-    </div>
-</div>
-<hr/>
-
-<!--Testimonials-->
-<div class="row">
-    
-</div>

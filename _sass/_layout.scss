@@ -40,7 +40,6 @@ h3 {
 a {
 	color: $link-color;
 	text-decoration: none;
-	//font-weight: bold;
 }
 a:hover {
 	color: $link-hover-color;
@@ -55,14 +54,10 @@ a:visited {
 
 main {
   padding: 0 15px;
-  //max-width: $content-width;
-  //max-width: 70%;
 	margin: 0 auto;
 }
 
 .container {
-  //max-width: $content-width;
-  //max-width: 70%;
 	margin: 0 auto;
 }
 
@@ -79,14 +74,12 @@ main {
 }
 
 header {
-    //background-color: $header;
     max-width: $header-width;
     background-image: url("../img/header.png");
     background-repeat: no-repeat;
     background-position: center;
     padding: 0px 15px;
     text-align: center;
-	  //margin: 0 0 0;
 	  height: 50vh;
 	  display: flex;
 	  justify-content: center;
@@ -169,9 +162,10 @@ header {
   margin-bottom: 10px;
 }
 
-.page-content-container hr {
+.page-content-container, hr {
   width: 80vw;
   margin: auto;
+  margin-top: 20px;
 }
 
 /*
@@ -257,65 +251,21 @@ header {
 *   PORTFOLIO
 */
 
-.portfolio-tags {
-  list-style: none;
-  margin-bottom: 5px;
+.project-row {
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
-.tag-item {
-  display: inline; /*display the elements on one line*/
-  line-height: 2.25;
-  margin-right: 2px; /*ensure the elements are clearly separate*/
-  //margin-bottom: 2px;
-  padding: 5px;
-  border-radius: 3px;
-  background-color: $tag-bg;
+.project-img-row {
+  padding-bottom: 10px;
+  text-align: center;
 }
 
-.project {
-  margin-bottom: 20px;
-  padding: 10px;
-  height: 100%;
-}
-
-.project-image-container {
-  width: 100%;
-}
-
-.project-image {
-  margin: auto;
-  border-radius: 10px;
-  padding-left: 15px;
-}
-
-
-//on larger screens making sure tags in opposite columns appear at same level
-@media screen and (min-width: 768px) {
-  .project {
-    padding-bottom: 100px;
+@media screen and (max-width: 575px) {
+  // Specifically for the mobile screenshots in the Nebula project, on xs screens
+  .collapsing-img {
+    padding-bottom: 10px;
   }
-
-  .project-top {
-    height: 90%;
-  }
-  .project-bottom {
-    height: 10%;
-  }
-}
-
-.project-tags {
-  list-style: none;
-  margin-bottom: 5px;
-}
-
-.project-tags li {
-  display: inline; /*display the elements on one line*/
-  line-height: 2.25;
-  margin-right: 2px; /*ensure the elements are clearly separate*/
-  //margin-bottom: 2px;
-  padding: 5px;
-  border-radius: 3px;
-  background-color: $tag-bg;
 }
 
 /*
