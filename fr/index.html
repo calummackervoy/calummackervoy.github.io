@@ -5,55 +5,90 @@ lang: fr
 lang-ref: index
 ---
 
-<!--What I do..-->
-<div class="row intro-container">
-    <div class="col-md-6 text-center">
-        <img class="intro-image" src="{{ '/assets/img/intro.jpg' | absolute_url }}" alt="Image of some app screen designs" />
-    </div>
-    <div class="col-md-6">
-        <h2>Ce Que Je Fais</h2>
-        <p>
-            Je fournis des solutions pour des applications, des sites web, des jeux, des systèmes et tout ce qui se trouve entre les deux.
-        </p>
-        <p>
-            Je peux vous aider avec les projets existant ou démarrer les projets de rien.
-        </p>
-        <p>
-            Je suis bien connecté avec les autres developpeurs, particulairement de les co-opératives Anglaises et Française. Je travaille avec des autres souvent, et par co-opération je peux fournir pour les besoins plus grands, et les besoins des spécialistes.
-        </p>
-        <p>
-            Pour recevoir un devi, ou discuter un projet, s'il vous plaît <a href="{{ '/fr/contact' | prepend: site.baseurl }}"></a>moi-contactez</a>.
-        </p>
-    </div>
-</div>
-
-<!--Work Showcase-->
-<hr/>
-<div class="row spotlight-container">
-    <div class="col-12 text-center" style="margin-bottom: 20px">
-        <h2>Mon Travail</h2>
-    </div>
-    {% for project in site.projects %}
-        {% if project.is_spotlight == true %}
-            <div class="spotlight-project">
-                <a href="{{ project.identifier | prepend: '/fr/portfolio/#' | prepend: site.baseurl }}">
-                <div class="row">
-                    <div class="col-12 text-center">
-                        <img class="spotlight-image" src="{{ project.spotlight_img_source | absolute_url }}" alt="{{project.spotlight_img_alt}}" />
-                    </div>
-                </div>
-                <p class="spotlight-text">{{project.spotlight_text}}</p>
-                </a>
-            </div>
-        {% endif %}
-    {% endfor %}
-    <div class="col-12 text-center">
-        <p style="font-size: 24px; font-weight: bold; margin-top: 20px;">Plus des projets au <a href="{{ '/fr/portfolio' | prepend: site.baseurl }}">Portfolio</a></p>
-    </div>
-</div>
-<hr/>
-
-<!--Testimonials-->
+<!--About me-->
 <div class="row">
-    
+    <div class="col-sm-12 col-md-4">
+        <img id="profile-pic" src="{{ '/assets/img/profile.jpg' | absolute_url }}" alt="profile picture of Calum" />
+    </div>
+    <div class="col-md-8" id="bio">
+        <p>
+            Je suis développeur situé à Paris. Je fournis des solutions informatiques à mes clients dans divers domaines
+            et contextes. Plus d'informations sur mon éxperience se trouvent dans mon <a
+                href="{{ '/fr/portfolio' | prepend: site.baseurl }}">Portfolio</a>.
+        </p>
+        <p>
+            Je suis actif dans les communautés coopératives. Grâce à cela, je suis en contact avec des développeurs du
+            monde entier, mais principalement d'Anglettere et de France.
+        </p>
+        <p>
+            J'aime bien écrire dans les langues programatiques ou humaines, j'écris bien déjà en anglais et j'apprend
+            français rapidement, un jour j'aimerais bien avoir le pouvoir d'écrire les livres et poèmes en français.
+        </p>
+        <p>
+            Je peux m'adapter à une variété de projets et de besoins, et je suis flexible dans mon travail. J'ai
+            toujours envie d'essayer de nouvelles choses et d'entreprendre des projets nouveaux et intéressants.
+        </p>
+    </div>
 </div>
+
+<!--CV-->
+{% assign projects = site.projects | where: "lang", page.lang %}
+
+<h1 class="mt-2">Expérience professionnelle</h1>
+
+{% for project in projects %}
+
+<div class="row project-row">
+    <p>
+        <span id="{{project.identifier}}">
+            <strong>
+                {% if project.website %}<a href="{{project.website}}" target="_blank">{{project.title}}</a>
+                {% else %} {{project.title}} {% endif %}
+            </strong>
+            {{ project.summary }}
+        </span>
+    </p>
+    {{ project.content }}
+</div>
+
+{% endfor %}
+
+<h2 id="cooperatives">Cooperatives</h2>
+
+<p>Parallèlement à mes activités indépendantes et à mes projets professionnels, j'ai participé activement, tout au long
+    de ma carrière au développement de nombreuses entreprises coopératives.</p>
+
+<p id="code-operative">
+    En juillet 2018 j'ai cofondé <a href="https://code-operative.co.uk" target="_blank">Code-Operative</a>,
+    la première coopérative de freelances numériques à voir le jour dans le nord-est de l'Angleterre.
+    La mission de Code-Operative était d'accorder à ses membres une plus grande autonomie dans leur vie économique, à la
+    fois en faisant découvrir à de nouvelles personnes les avantages du travail indépendant et en faisant découvrir aux
+    travailleurs indépendants les avantages de la mutualisation au sein du modèle coopératif, grâce à une plus grande
+    sécurité et autonomie dans leur travail et à un réseau de soutien. Nos clients étaient des entreprises
+    technologiques engagées dans le social, généralement elles-mêmes des coopératives ou des organisations à but non
+    lucratif.
+    Entre 2018 et 2023, j'ai été un membre actif de la coopérative et j'ai contribué à l'élaboration de ses statuts, de
+    sa mission, de son modèle économique, de ses premiers clients et de son modèle de gouvernance.
+</p>
+
+<p id="cotech">
+    <b>CoTech</b> est un réseau de coopératives éthiques réparties à travers le Royaume-Uni qui fournissent des
+    services technologiques, numériques et créatifs.
+    Entre 2019 et 2023, j'ai participé activement à l'organisation des activités du réseau, par exemple en organisant
+    la <a href="https://wiki.coops.tech/wiki/Newcastle_2019" target="_blank">Conférence de CoTech en Novembre 2019 à Newcastle</a>,
+    à laquelle ont participé environ 60 personnes.
+    Pour plus d'informations, consultez le <a href="https://coops.tech/" target="_blank">site web CoTech</a> ou 
+    <a href="https://community.coops.tech/" target="_blank">le forum CoTech</a>.
+</p>
+
+<p id="gamescommons">
+    <a href="https://gamescommons.com/" target="_blank">Games Commons</a> est une nouvelle façon d'envisager la conception 
+    de jeux vidéo, basée sur les principes de l'économie collaborative et du web sémantique.
+    Le projet phare, Sim Polis, est un jeu qui consiste à créer et à détruire des systèmes, développé sur <b>Godot</b>
+    (GDScript and .NET), <b>Flask/Python</b> et <b>MongoDB</b>.
+</p>
+
+<p>
+    Pour toute question concernant de nouveaux projets, des postes ou des collaborations, veuillez <a
+        href="{{ '/contact' | prepend: site.baseurl }}">me contacter</a>.
+</p>

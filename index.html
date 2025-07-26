@@ -5,25 +5,100 @@ lang: en
 lang-ref: index
 ---
 
-<!--What I do..-->
-<div class="row intro-container">
-    <div class="col-md-6 text-center">
-        <img class="intro-image" src="{{ '/assets/img/intro.jpg' | absolute_url }}" alt="Image of some app screen designs" />
+<!--About me-->
+<div class="row">
+    <div class="col-sm-12 col-md-4">
+        <img id="profile-pic" src="{{ '/assets/img/profile.jpg' | absolute_url }}" alt="profile picture of Calum" />
     </div>
-    <div class="col-md-6">
-        <h2>What I do...</h2>
+    <div class="col-md-8" id="bio">
         <p>
-            I provide solutions for apps, websites, games, systems and everything in between.
+            I am a developer based in Paris who can provide solutions for a variety of different purposes. I have a
+            wide
+            variety of experience, covering web, mobile and games development. I graduated from Newcastle University
+            with a First Class with Honours degree in Computer Science in 2017, and I've been self-employed since.
+            I've
+            worked on projects for governments and for ambitious startups, on cutting-edge open-source projects and
+            on
+            emerging web standards.
         </p>
         <p>
-            I can help with existing projects or manage development from scratch.
-        </p>
-        <p>
-            I am well-connected with other developers in the area, and frequently collaborate with others. This means
-            that I can provide for bigger projects and bring in developers with specialist skills.
-        </p>
-        <p>
-            To get a quote, or discuss a project, please <a href="{{ '/contact' | prepend: site.baseurl }}">get in touch</a>.
+            I conduct personal research, particularly concerning the semantic web. Much of my code is open-source. I
+            have extensive experience organising in co-operatives and in free software. I'm particularly interested
+            in
+            social technics, the semantic web and the commons. I like writing and making games, too. My <a
+                href="{{ '/blog' | prepend: site.baseurl }}">Blog</a> is a good place to read more about my
+            activities.
         </p>
     </div>
 </div>
+
+<!--CV-->
+{% assign projects = site.projects | where: "lang", page.lang %}
+
+<h1 class="mt-2">Professional history</h1>
+
+{% for project in projects %}
+
+<div class="row project-row">
+    <p>
+        <span id="{{project.identifier}}">
+            <strong>
+                {% if project.website %}<a href="{{project.website}}" target="_blank">{{project.title}}</a>
+                {% else %} {{project.title}} {% endif %}
+            </strong>
+            {{ project.summary }}
+        </span>
+    </p>
+    {{ project.content }}
+</div>
+
+{% endfor %}
+
+<h2 id="cooperatives">Cooperatives</h2>
+
+<p>Alongside my freelance activities and professional projects, during my career I have been active in the
+    establishment
+    and growth of numerous cooperative businesses.</p>
+
+<p id="code-operative">
+    In July 2018 I cofounded <a href="https://code-operative.co.uk" target="_blank">Code-Operative</a>, the
+    first tech
+    freelancers co-operative to be founded in the North East of England.
+    Code-Operative's mission was to grant its members a greater degree of autonomy over their economic lives -
+    both by
+    exposing new people to the benefits of freelancing and in exposing freelancers to the benefits of
+    mutualisation
+    within the co-operative model, via a greater degree of security and autonomy in their work and via a support
+    network. Our clients were tech-for-good, typically themselves co-operatives or non-profit organisations.
+    Between 2018 and 2023 I was an active member of the co-operative and helped to establish its articles of
+    association, mission, business model, first clients and the governance model.
+</p>
+
+<p id="cotech">
+    <b>CoTech</b> is a network of ethical co-operatives from across the UK providing technology, digital and
+    creative
+    services.
+    Between 2019 and 2023 I was an active member in organising the network’s activities, for example arranging
+    the <a href="https://wiki.coops.tech/wiki/Newcastle_2019" target="_blank">November Gathering event in
+        Newcastle</a>
+    which was attended by around 60 people.
+    More information can be found <a href="https://coops.tech/" target="_blank">on the CoTech website</a>, or <a
+        href="https://community.coops.tech/" target="_blank">on the CoTech forum</a>
+</p>
+
+<p id="gamescommons">
+    <a href="https://gamescommons.com/" target="_blank">Games Commons</a> is a new way to conceive of game
+    design based
+    on principles from the commons economy and on the semantic web.
+    The flagship project, Sim Polis, is a game about making and breaking systems that is being built using
+    <b>Godot</b>
+    (GDScript and .NET), <b>Flask/Python</b> and <b>MongoDB</b>.
+</p>
+
+<p>
+    For enquiries about new projects, roles and collaborations, please <a
+        href="{{ '/contact' | prepend: site.baseurl }}">get in touch</a>. My full CV including educational
+    achievements
+    is available on request and on my <a href="https://www.linkedin.com/in/calum-mackervoy-9a0504151/"
+        target="_blank">LinkedIn</a> page.
+</p>
