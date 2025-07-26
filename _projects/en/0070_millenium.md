@@ -4,7 +4,7 @@ title: Millenium
 website: https://millenium.trym.fr/
 lang: en
 ---
-**Full Stack Web Development** on a 3D website for the Millenium tour of a well-known French musician. The website needed to be visually impressive, and an initial version of the site included a custom chat which permitted thousands of Trym’s fans to connect and communicate with Trym using WebSockets.
+**Full Stack Development** on a 3D website for the Millenium tour of a well-known French musician. The website needed to be visually impressive, and an initial version of the site included a custom chat which permitted thousands of Trym’s fans to connect and communicate with Trym using WebSockets.
 
 <div class="row project-img-row">
     <div class="col-sm-6">
