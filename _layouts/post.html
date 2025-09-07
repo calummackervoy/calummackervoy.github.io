@@ -4,8 +4,11 @@ layout: page
 
 <article class="post">
     <div class="post-heading row">
+        {% assign lang = page.lang | default: 'en' %}
+        <a id="back-button" href="{{ '/blog/' | prepend: lang | prepend: '/' | prepend: site.url }}">&#8592; Back</a>
+
         <div class="col-12 text-center">
-            <h4 class='article-summary'>{{page.summary}}</h4>
+            <h4 class='article-summary'>{{ page.summary }}</h4>
             <h5 class="article-data">{{ page.date | date: "%B %e, %Y" }}</h5>
         </div>
     </div>
