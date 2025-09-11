@@ -8,7 +8,7 @@ lang-ref: commons-behaviour-trees
 header_image: '/assets/img/post_headers/03.jpg'
 ---
 
-Les Communs sont des propriétés qui s'ouvrent à l'usage de tous et qui sont détenus et gérés par les personnes qui les utilisent... mais qu'est-ce que cela signifie pour l'IA dans le développement de jeux vidéo ?
+Les biens communs sont des propriétés qui s'ouvrent à l'usage de tous et qui sont détenus et gérés par les personnes qui les utilisent... mais qu'est-ce que cela signifie pour l'IA dans le développement de jeux vidéo ?
 
 Je travaille sur le concept d'un [Games Commons](https://gamescommons.com/) (jeu en bien commun), qui est une nouvelle façon de concevoir les jeux, axée sur la flexibilité, la collaboration et le concept « Do-It-Together » (Bricolons ensemble). Ce sont des jeux créés autour d'une communauté créative de hackers, comme Wikipédia, mais pour le contenu des jeux.
 

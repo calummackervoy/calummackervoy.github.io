@@ -8,7 +8,7 @@ lang-ref: games-transformed-2023
 header_image: '/assets/img/post_headers/games-transformed-2023.png'
 ---
 
-Les Communs sont des propriétés qui s'ouvrent à l'usage de tous et qui sont détenus et gérés par les personnes qui les utilisent... mais qu'est-ce que cela signifie pour le développement d'un jeu ?
+Les biens communs sont des propriétés qui s'ouvrent à l'usage de tous et qui sont détenus et gérés par les personnes qui les utilisent... mais qu'est-ce que cela signifie pour le développement d'un jeu ?
 
 J'aimerais vous présnter à notre soumission à Games Transformed, Realm. Dans l'esprit de les thèmes du jam, l'anti-capitalisme et l'action collective, nous espérons vous convaincre qu'il y a du potentiel dans la construction des jeux en commun, c'est comme Wikipedia mais pour le contenu des jeux vidéo. Suite à des expériences passées, dans Realm les jouers soumettent leurs propres personnages en utilisant un standard ouvert qui peut-être interoperable avec d'autres jeux. J'y reviendrai, mais pour l'instant, le meilleur moyen de vous montrer cela est que vous y jouiez.
 
