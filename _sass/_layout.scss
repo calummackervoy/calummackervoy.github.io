@@ -69,10 +69,6 @@ main {
 *    HEADER.HTML
 */
 
-.navbar-toggler {
-  background-color: $light;
-}
-
 header {
     max-width: $header-width;
     background-image: url("../img/header.png");
@@ -98,6 +94,17 @@ header {
   text-shadow: 4px 4px 2px black;
   font-family: $main-heading-font;
   font-size: 64px;
+}
+
+nav {
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+}
+
+@media screen and (min-width: 300px) {
+  .navbar-nav {
+      flex-direction: row;
+  }
 }
 
 .nav-item {
