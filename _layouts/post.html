@@ -5,7 +5,7 @@ layout: page
 <article class="post">
     <div class="post-heading row">
         {% assign lang = page.lang | default: 'en' %}
-        <a id="back-button" href="{{ '/blog/' | prepend: lang | prepend: '/' | prepend: site.url }}">&#8592; Back</a>
+        <a id="back-button" href="{{ '/blog/' | prepend: lang | prepend: '/' | prepend: site.url }}">&#8592; {% if lang == 'fr' %}Retour{% else %}Back{% endif %}</a>
 
         <div class="col-12 text-center">
             <h4 class='article-summary'>{{ page.summary }}</h4>
