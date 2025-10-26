@@ -151,6 +151,6 @@ Accepting a `tileset` data-type, the player can upload their custom terrain set,
 
 ## Games Commons
 
-The concept of building a game piloted by the data published by its' own players is an exciting one. Done well, the game becomes limitless and even alive: evolving with the collective efforts of the players. A game built in common is a [Games Commons](https://gamescommons.com/), and while in this demonstration we have been principally concerned with straightforward graphical elements, the idea constitutes a novel approach to game design that has far-reaching implications.
+The concept of building a game piloted by the data published by its own players is an exciting one. Done well, the game becomes limitless and even alive: evolving with the collective efforts of the players. A game built in common is a [Games Commons](https://gamescommons.com/), and while in this demonstration we have been principally concerned with straightforward graphical elements, the idea constitutes a novel approach to game design that has far-reaching implications.
 
 If this article has piqued your interest and you'd like to hear more about the concepts covered or more broadly about the project - or if you're interested by Godot and open-source games development - then don't hesitate to <a href="{{ '/contact' | prepend: site.baseurl }}">get in touch</a>!
