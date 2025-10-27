@@ -17,6 +17,9 @@ layout: page
 
     <div class="entry">
         {{ content }}
+        <div class="text-center mt-5">
+            <a href="{{ '/blog/' | prepend: lang | prepend: '/' | prepend: site.url }}">{% if lang == 'fr' %}Retour au Blog{% else %}Back to Blog{% endif %}</a>
+        </div>
     </div>
     <hr/>
 </article>
