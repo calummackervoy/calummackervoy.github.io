@@ -17,7 +17,7 @@ Mann argues that contrary to the assumptions of most dominant sociology orthodox
 
 Empirical proof can be found in the simple question: in which society do _you_ live? The answer might start at the level of the national state: "The United Kingdom". Another answer would be broader: an "industrial society", a "capitalist society", or "the West". A carefully-considered answer would certainly be a _confederal_ rather than a unitary society.
 
-Instead, Mann conceives of the social space we inhabit as being "overlapping networks of social interaction"; more simply, we are moved by ideological, economic, political and military _organisation_, specific groups of people who are using organisational means at their disposal to achieve human goals, whatever these may be. To analyse them we can thus reject abstract language like "factors" of social life, where the central problems concern organisation, control, logistics, communication—the capacity to control people, materials, and territories, and the development of this capacity throughout history.
+Instead, Mann conceives of the social space we inhabit as being "overlapping networks of social interaction"; more simply, social power is shaped by ideological, economic, political and military _organisations_, specific groups of people who are using organisational means at their disposal to achieve human goals, whatever these may be. To analyse them we can thus reject abstract language like "factors" of social life, where the central problems concern organisation, control, logistics, communication, the capacity to control people, materials, and territories, and the development of this capacity throughout history.
 
 ## Four Sources of Social Power
 
@@ -49,7 +49,7 @@ Arpentage can be an efficient way to cover large works with a group, but in our 
 
 The Etruscans (a pre-Roman civilisation from North-West Italy) probably migrated from the Balkans and Asia Minor, and brought with them "civilisation". By about 600 B.C. their cultural influence on their neighbors was changing hill villages into small city-states. One of these was Rome.
 
-The Romans copied the hoplite form (heavy infantry) from the Etruscans. From the peasant farmers (who were less politically concentrated and less egalitarian than in the Greek Polis), this later evolve into the Roman legion.
+The Romans copied the hoplite form (heavy infantry) from the Etruscans. From the peasant farmers (who were less politically concentrated and less egalitarian than in the Greek Polis), this later evolved into the Roman legion.
 
 There was a dualism between popular assemblies and the Senate, the origin of the "orders," senatorial and equestrian, as well as of the political factions which were important in the late Republic.
 
