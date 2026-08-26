@@ -331,3 +331,12 @@ nav {
     }
   }
 }
+
+blockquote {
+  padding-left: 20px;
+  padding-top: 5px;
+  padding-bottom: 1pt;
+  border-left: $blockquote-border-color 5px solid;
+  background-color: $blockquote-bg-color;
+  font-style: italic;
+}
