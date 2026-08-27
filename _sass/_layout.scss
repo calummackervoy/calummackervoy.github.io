@@ -235,8 +235,13 @@ nav {
 *   BLOG
 */
 #back-button {
-  margin-left: 5vw;
   margin-bottom: 10px;
+}
+
+@media screen and (min-width: 1184px) {
+  #back-button {
+    margin-left: 5vw;
+  }
 }
 
 .post-card {
@@ -276,7 +281,7 @@ nav {
     .post-text {
       top: 30%;
       width: 95%;
-    }   
+    }
   }
 
   .post-text:hover {
@@ -307,10 +312,15 @@ nav {
   }
 
   .entry {
-    padding-left: 10vw;
-    padding-right: 10vw;
     padding-top: 30px;
     padding-bottom: 30px;
+  }
+
+  @media screen and (min-width: 930px) {
+    .entry {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
   }
 
   .blog-full-image {
