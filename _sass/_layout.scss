@@ -80,16 +80,16 @@ td, th {
 */
 
 header {
-    max-width: $header-width;
-    background-image: url("../img/header.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    padding: 0px 15px;
-    text-align: center;
-	  height: 50vh;
-	  display: flex;
-	  justify-content: center;
-	  align-items: center;
+  max-width: $header-width;
+  background-image: url("../img/header.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 0px 15px;
+  text-align: center;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @media screen and (min-width: $header-width) {
