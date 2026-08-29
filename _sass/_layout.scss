@@ -99,11 +99,18 @@ header {
   }
 }
 
-.main-header {
+.main-header, .main-sub-header {
   color: $light;
   text-shadow: 4px 4px 2px black;
   font-family: $main-heading-font;
+}
+
+.main-header {
   font-size: 64px;
+}
+
+.main-sub-header {
+  font-size: 24px;
 }
 
 nav {
