@@ -5,6 +5,8 @@ summary: Networking for worker's co-ops, or Mutual Aid for social enterprise
 lang: en
 lang-ref: givers-gain
 header_image: '/assets/img/post_headers/04.jpeg'
+og_image_src: '/assets/img/og/givers_gain.png'
+og_image_alt: Site logo, overlapping metal bars with a forest green tint. Text reads 'Giver's Gain', and 'Mutual Aid for social enterprise'
 ---
 
 Over the past six months, I've been participating in a Mutual Aid scheme for co-operatives called [Giver's Gain](https://www.workers.coop/civicrm/events/), reminiscent of other referral networks for small-medium enterprises, where members aid one another in making connections that assist routine business needs or further their career goals. The primary difference, of course, is that in Giver's Gain members are assumed to be pursuing social goals which align to the co-operative movement.
